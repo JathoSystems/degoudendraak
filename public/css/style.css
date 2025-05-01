@@ -1,0 +1,259 @@
+/************ Fonts *************/
+@font-face {
+    font-family: 'chinese_takeawayregular';
+    src: url('../fonts/chinesetakeaway-webfont.woff2') format('woff2'),
+    url('../fonts/chinesetakeaway-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.golden_dragon_text {
+    font-family: 'chinese_takeawayregular', serif;
+}
+
+/************ Body *************/
+body {
+    background-color: darkred;
+    margin: 15px 50px;
+}
+
+/************ Divs *************/
+.text_center {
+    text-align: center;
+}
+
+/************ Images *************/
+.header_img {
+    vertical-align: middle;
+    height: 50px;
+}
+
+.menu_img_left {
+    float: left;
+    height: 200px;
+}
+
+.menu_img_right {
+    float: right;
+    height: 200px;
+}
+
+#restaurant_menu_img {
+    width: 100%;
+    height: 100%;
+}
+
+/************ Table stuff *************/
+.main_table {
+    padding: 5px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0;
+}
+
+.first_tr {
+    height: 50px;
+    background-color: red;
+    text-align: center;
+}
+
+.dragons_td {
+    text-align: center;
+    width: 30%;
+    color: yellow;
+    font-size: 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.td_width_7px {
+    width: 7px;
+}
+
+.width_25px {
+    width: 25px;
+}
+
+.table_width {
+    width: 100%;
+}
+
+.menu_first_td {
+    text-align: center;
+}
+
+.menu_first_text {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.menu_second_text {
+    font-size: 50px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.menu_table {
+    font-size: 20px;
+    color: white;
+    margin: 10px auto auto;
+}
+
+.menu_gradient {
+    background-image: url('../images/menu_bg_gradient.png');
+}
+
+.menu_middle {
+    vertical-align: middle;
+}
+
+.menu_middle a {
+    color: white;
+}
+
+.second_tr {
+    padding-top: 50px;
+}
+
+.height_td {
+    height: 50px;
+}
+
+.width_td {
+    width: 50px;
+}
+
+.table_width2 {
+    width: 60%;
+}
+
+.second_td {
+    border: 1px solid black;
+    background: floralwhite;
+}
+
+.kly {
+    width: 40%;
+    text-align: right;
+}
+
+.between_td {
+    width: 20%;
+}
+
+.fyh {
+    width: 40%;
+}
+
+.text_right {
+    text-align: right;
+}
+
+/************ Links *************/
+a {
+    text-decoration: none;
+    color: yellow;
+    font-weight: bold;
+}
+
+/************ Scrolling header text *************/
+.scrolling-text {
+    animation: scrolling 10s linear infinite;
+    white-space: nowrap;
+}
+
+.scrolling-text-holder {
+    overflow: hidden;
+    max-width: 1px;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/************ Lines *************/
+.lines_first_tr {
+    height: 7px;
+    background-color: red;
+}
+
+.lines_tr {
+    height: 25px;
+    background-color: red;
+}
+
+.lines_1 {
+    width: 25px;
+    border-left: 4px solid yellow;
+    border-top: 4px solid yellow;
+}
+
+.lines_2 {
+    width: 25px;
+    border-right: 4px solid yellow;
+    border-top: 4px solid yellow;
+}
+
+.lines_3 {
+    width: 25px;
+    border-right: 4px solid yellow;
+    border-bottom: 4px solid yellow;
+}
+
+.lines_4 {
+    border-top: 4px solid yellow;
+    border-bottom: 4px solid yellow;
+}
+
+.lines_5 {
+    width: 25px;
+    border-left: 4px solid yellow;
+    border-bottom: 4px solid yellow;
+}
+
+.lines_6 {
+    width: 25px;
+    border: 4px solid yellow;
+}
+
+.lines_7 {
+    width: 25px;
+    border-bottom: 4px solid yellow;
+}
+
+.lines_8 {
+    width: 25px;
+    border-right: 4px solid yellow;
+    border-left: 4px solid yellow;
+}
+
+.lines_9 {
+    width: 25px;
+    border-top: 4px solid yellow;
+}
+
+.lines_10 {
+    width: 25px;
+    border-right: 4px solid yellow;
+}
+
+.lines_11 {
+    width: 25px;
+    border-left: 4px solid yellow;
+}
+
+/************ iframe (Contact) *************/
+.contact_map {
+    border: none;
+    tab-index: 0;
+}

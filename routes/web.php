@@ -5,9 +5,11 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
 
+// Home
 Route::get('/', function () {
     return view('welcome');
 });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

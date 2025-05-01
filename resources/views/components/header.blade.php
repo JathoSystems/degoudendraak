@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+</head>
+<body>
+<table class="main_table">
+    <tr class="first_tr">
+        <td class="dragons_td">
+            <img class="header_img" src="{{ asset('images/dragon-small.png') }}" alt="Golden Dragon">
+            <span class="golden_dragon_text">De Gouden Draak</span>
+            <img class="header_img" src="{{ asset('images/dragon-small-flipped.png') }}" alt="Golden Dragon">
+        </td>
+        <td class="scrolling-text-holder">
+            <a href="/">
+                <p class="scrolling-text">
+                    Welkom bij De Gouden Draak. Klik op deze tekst om de aanbiedingen van deze week te zien!
+                </p>
+            </a>
+        </td>
+        <td class="dragons_td">
+            <img class="header_img" src="{{ asset('images/dragon-small.png') }}" alt="Golden Dragon">
+            <span class="golden_dragon_text">De Gouden Draak</span>
+            <img class="header_img" src="{{ asset('images/dragon-small-flipped.png') }}" alt="Golden Dragon">
+        </td>
+    </tr>
+</table>
+</body>
+</html>
