@@ -1,0 +1,1572 @@
+{
+	"table": "menu",
+	"rows":
+	[
+		{
+			"id": 1,
+			"menunummer": 1,
+			"menu_toevoeging": null,
+			"naam": "Soep Ling Fa",
+			"price": 3.8,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 2,
+			"menunummer": 2,
+			"menu_toevoeging": null,
+			"naam": "Kippensoep",
+			"price": 2.9,
+			"soortgerecht": "SOEP",
+			"beschrijving": ""
+		},
+		{
+			"id": 3,
+			"menunummer": 3,
+			"menu_toevoeging": null,
+			"naam": "Tomatensoep",
+			"price": 2.9,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 4,
+			"menunummer": 4,
+			"menu_toevoeging": null,
+			"naam": "Haaienvinnensoep",
+			"price": 3.1,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 5,
+			"menunummer": 5,
+			"menu_toevoeging": null,
+			"naam": "Champignonsoep",
+			"price": 3.3,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 6,
+			"menunummer": 6,
+			"menu_toevoeging": null,
+			"naam": "Pekingsoep",
+			"price": 3.8,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 7,
+			"menunummer": 7,
+			"menu_toevoeging": null,
+			"naam": "Wan Tan Soep",
+			"price": 4.3,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 8,
+			"menunummer": 8,
+			"menu_toevoeging": null,
+			"naam": "Chinese Champignonsoep",
+			"price": 4.1,
+			"soortgerecht": "SOEP",
+			"beschrijving": null
+		},
+		{
+			"id": 9,
+			"menunummer": 10,
+			"menu_toevoeging": null,
+			"naam": "Loempia Ling Fa",
+			"price": 6.2,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "met atjar, ananas en pindasaus"
+		},
+		{
+			"id": 10,
+			"menunummer": 11,
+			"menu_toevoeging": null,
+			"naam": "Loempia Compleet",
+			"price": 6.2,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "met gesmoord rundvlees en pikante saus"
+		},
+		{
+			"id": 11,
+			"menunummer": 12,
+			"menu_toevoeging": null,
+			"naam": "Loempia met Kip",
+			"price": 3.9,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 12,
+			"menunummer": 13,
+			"menu_toevoeging": null,
+			"naam": "Loempia",
+			"price": 3.8,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 13,
+			"menunummer": 14,
+			"menu_toevoeging": null,
+			"naam": "Chinese mini loempia",
+			"price": 4.9,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "4 st."
+		},
+		{
+			"id": 14,
+			"menunummer": 14,
+			"menu_toevoeging": "A",
+			"naam": "Vegetarische mini loempia",
+			"price": 4.9,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "12 st."
+		},
+		{
+			"id": 15,
+			"menunummer": 15,
+			"menu_toevoeging": null,
+			"naam": "Kroepoek",
+			"price": 2.5,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 16,
+			"menunummer": 15,
+			"menu_toevoeging": "A",
+			"naam": "Casave Kroepoek",
+			"price": 2.7,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 17,
+			"menunummer": 16,
+			"menu_toevoeging": null,
+			"naam": "Pangsit Goreng",
+			"price": 3.9,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "7 st."
+		},
+		{
+			"id": 18,
+			"menunummer": 17,
+			"menu_toevoeging": null,
+			"naam": "Pisang Goreng",
+			"price": 3.4,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "5 st."
+		},
+		{
+			"id": 19,
+			"menunummer": 18,
+			"menu_toevoeging": null,
+			"naam": "Chinese Dim Sum",
+			"price": 5.4,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "mini loempia, kerry ko, pangsit goreng, garnalenpasteitje"
+		},
+		{
+			"id": 20,
+			"menunummer": 19,
+			"menu_toevoeging": null,
+			"naam": "Sat&eacute; Babi",
+			"price": 5.4,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "4 st."
+		},
+		{
+			"id": 21,
+			"menunummer": 20,
+			"menu_toevoeging": null,
+			"naam": "Sat&eacute; Ajam",
+			"price": 5.4,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "4 st."
+		},
+		{
+			"id": 22,
+			"menunummer": 20,
+			"menu_toevoeging": "A",
+			"naam": "Sat&eacute; Garnalen",
+			"price": 9.9,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "3 st."
+		},
+		{
+			"id": 23,
+			"menunummer": 21,
+			"menu_toevoeging": null,
+			"naam": "Fong Mei Ha",
+			"price": 8.1,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "krokant gepaneerd garnalen. 4 st."
+		},
+		{
+			"id": 24,
+			"menunummer": 22,
+			"menu_toevoeging": null,
+			"naam": "Patat",
+			"price": 2.3,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 25,
+			"menunummer": 23,
+			"menu_toevoeging": null,
+			"naam": "Tsa Siu Mai",
+			"price": 3.5,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": "gebakken vleespasteitje. 4 st."
+		},
+		{
+			"id": 26,
+			"menunummer": 24,
+			"menu_toevoeging": null,
+			"naam": "Atjar",
+			"price": 3,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 27,
+			"menunummer": 25,
+			"menu_toevoeging": null,
+			"naam": "Witte Rijst",
+			"price": 3,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 28,
+			"menunummer": 26,
+			"menu_toevoeging": null,
+			"naam": "Grote pindasaus",
+			"price": 3.9,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 29,
+			"menunummer": 27,
+			"menu_toevoeging": null,
+			"naam": "Kleine pindasaus",
+			"price": 2.3,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 30,
+			"menunummer": 28,
+			"menu_toevoeging": null,
+			"naam": "Kippenpootje",
+			"price": 2.3,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 31,
+			"menunummer": 29,
+			"menu_toevoeging": null,
+			"naam": "Halve kip",
+			"price": 6,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 32,
+			"menunummer": 29,
+			"menu_toevoeging": "H",
+			"naam": "Kroket",
+			"price": 1.4,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 33,
+			"menunummer": 29,
+			"menu_toevoeging": "G",
+			"naam": "Frikandel",
+			"price": 1.4,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 34,
+			"menunummer": 180,
+			"menu_toevoeging": "H",
+			"naam": "Kleine Sambal",
+			"price": 2.5,
+			"soortgerecht": "VOORGERECHT",
+			"beschrijving": null
+		},
+		{
+			"id": 35,
+			"menunummer": 30,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi Goreng Ling Fa",
+			"price": 14.3,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": "Foe Yong Hai, Babi Pangang, sat&eacute; en kippenpootje"
+		},
+		{
+			"id": 36,
+			"menunummer": 31,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi Goreng met ei",
+			"price": 5,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 37,
+			"menunummer": 32,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi Goreng speciaal",
+			"price": 8.5,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 38,
+			"menunummer": 33,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi Goreng met sat&eacute;",
+			"price": 8.5,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": "3 st."
+		},
+		{
+			"id": 39,
+			"menunummer": 34,
+			"menu_toevoeging": null,
+			"naam": "Nasi Yeung Chow",
+			"price": 10.9,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 40,
+			"menunummer": 34,
+			"menu_toevoeging": "A",
+			"naam": "Nasi Yeung Chow",
+			"price": 13,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": "met garnaaltjes en Cha Sieuw-vlees"
+		},
+		{
+			"id": 41,
+			"menunummer": 35,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi Malay",
+			"price": 9.3,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 42,
+			"menunummer": 36,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi met kipfilet",
+			"price": 9.3,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 43,
+			"menunummer": 37,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi met varkensvlees",
+			"price": 9.3,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 44,
+			"menunummer": 38,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi met garnalen",
+			"price": 14.3,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 45,
+			"menunummer": 39,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi met ossenhaas",
+			"price": 15.3,
+			"soortgerecht": "BAMI EN NASI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 46,
+			"menunummer": 40,
+			"menu_toevoeging": null,
+			"naam": "Babi Pangang, Foe Yong Hani en sat&eacute;",
+			"price": 15.8,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 47,
+			"menunummer": 41,
+			"menu_toevoeging": null,
+			"naam": "Babi Pangang, Tjap Tjoy en sat&eacute;",
+			"price": 15.8,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 48,
+			"menunummer": 42,
+			"menu_toevoeging": null,
+			"naam": "Babi Pangang, Koe Loe Yuk en sat&eacute;",
+			"price": 15.8,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 49,
+			"menunummer": 43,
+			"menu_toevoeging": null,
+			"naam": "Babi Pangang, Tau Sie Kai en sat&eacute;",
+			"price": 16.5,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 50,
+			"menunummer": 44,
+			"menu_toevoeging": null,
+			"naam": "Koe Loe Yuk, Foe Yong Hai en sat&eacute;",
+			"price": 15.8,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 51,
+			"menunummer": 45,
+			"menu_toevoeging": null,
+			"naam": "Koe Loe Yuk, Tjap Tjoy en sat&eacute;",
+			"price": 15.8,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 52,
+			"menunummer": 46,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai, Tjap Tjoy en sat&eacute;",
+			"price": 15.8,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 53,
+			"menunummer": 47,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai, Kip Kerrie en Sat&eacute;",
+			"price": 16.5,
+			"soortgerecht": "COMBINATIE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 54,
+			"menunummer": 50,
+			"menu_toevoeging": null,
+			"naam": "Mihoen Ling Fa",
+			"price": 16.4,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": "Foe Yong Hai, Babi Pangang, sat&eacute; en kippenpootje"
+		},
+		{
+			"id": 55,
+			"menunummer": 51,
+			"menu_toevoeging": null,
+			"naam": "Mihoen met varkensvlees",
+			"price": 9.3,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 56,
+			"menunummer": 52,
+			"menu_toevoeging": null,
+			"naam": "Mihoen met kipfilet",
+			"price": 10.4,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 57,
+			"menunummer": 53,
+			"menu_toevoeging": null,
+			"naam": "Mihoen met ossenhaas",
+			"price": 16.4,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 58,
+			"menunummer": 54,
+			"menu_toevoeging": null,
+			"naam": "Mihoen met garnalen",
+			"price": 15.3,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 59,
+			"menunummer": 55,
+			"menu_toevoeging": null,
+			"naam": "Mihoen Singapore-style",
+			"price": 11.9,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": "met kleine garnaaltjes en Cha Sieuw-vlees en kerrie poeder"
+		},
+		{
+			"id": 60,
+			"menunummer": 56,
+			"menu_toevoeging": null,
+			"naam": "Mihoen met Cha Sieuw vlees",
+			"price": 11.2,
+			"soortgerecht": "MIHOEN GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 61,
+			"menunummer": 57,
+			"menu_toevoeging": null,
+			"naam": "Chinese Bami Ling Fa",
+			"price": 16.9,
+			"soortgerecht": "CHINESE BAMI GERECHTEN",
+			"beschrijving": "Foe Yong Hai, Babi Pangang, sat&eacute; en kippenpootje"
+		},
+		{
+			"id": 62,
+			"menunummer": 58,
+			"menu_toevoeging": null,
+			"naam": "Chinese Bami met varkensvlees",
+			"price": 10.1,
+			"soortgerecht": "CHINESE BAMI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 63,
+			"menunummer": 58,
+			"menu_toevoeging": "A",
+			"naam": "Chinese Bami met kipfilet",
+			"price": 11.2,
+			"soortgerecht": "CHINESE BAMI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 64,
+			"menunummer": 58,
+			"menu_toevoeging": "B",
+			"naam": "Chinese Bami met Cha Sieuw-vlees",
+			"price": 12.2,
+			"soortgerecht": "CHINESE BAMI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 65,
+			"menunummer": 58,
+			"menu_toevoeging": "C",
+			"naam": "Chinese Bami met garnalen",
+			"price": 15.8,
+			"soortgerecht": "CHINESE BAMI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 66,
+			"menunummer": 58,
+			"menu_toevoeging": "D",
+			"naam": "Chinese Bami met ossenhaas",
+			"price": 17.4,
+			"soortgerecht": "CHINESE BAMI GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 67,
+			"menunummer": null,
+			"menu_toevoeging": "M1",
+			"naam": "Bami of Nasi Rames Ling Fa",
+			"price": 15.3,
+			"soortgerecht": "INDISCHE GERECHTEN",
+			"beschrijving": "Babi Pangan, Foe Yong Hai, Daging Roedjak, Atjar en kippootje"
+		},
+		{
+			"id": 68,
+			"menunummer": null,
+			"menu_toevoeging": "M2",
+			"naam": "Bami of Nasi Rames",
+			"price": 8.8,
+			"soortgerecht": "INDISCHE GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 69,
+			"menunummer": null,
+			"menu_toevoeging": "M3",
+			"naam": "Bami of Nasi Rames speciaal",
+			"price": 10.8,
+			"soortgerecht": "INDISCHE GERECHTEN",
+			"beschrijving": null
+		},
+		{
+			"id": 70,
+			"menunummer": null,
+			"menu_toevoeging": "M4",
+			"naam": "Gado Gado",
+			"price": 7.6,
+			"soortgerecht": "INDISCHE GERECHTEN",
+			"beschrijving": "met witte rijst"
+		},
+		{
+			"id": 71,
+			"menunummer": null,
+			"menu_toevoeging": "M5",
+			"naam": "Daging Smoor",
+			"price": 13.3,
+			"soortgerecht": "INDISCHE GERECHTEN",
+			"beschrijving": "met witte rijst"
+		},
+		{
+			"id": 72,
+			"menunummer": null,
+			"menu_toevoeging": "M6",
+			"naam": "Daging Roedjak",
+			"price": 13.3,
+			"soortgerecht": "INDISCHE GERECHTEN",
+			"beschrijving": "met witte rijst"
+		},
+		{
+			"id": 73,
+			"menunummer": 59,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai Ling Fa",
+			"price": 16.4,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": "ossenhaas, garnalen en kipfilet"
+		},
+		{
+			"id": 74,
+			"menunummer": 60,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai met varkensvlees",
+			"price": 8.8,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 75,
+			"menunummer": 61,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai met kipfilet",
+			"price": 9.2,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 76,
+			"menunummer": 62,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai met garnalen",
+			"price": 15.3,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 77,
+			"menunummer": 63,
+			"menu_toevoeging": null,
+			"naam": "Foe Yong Hai met krab",
+			"price": 15.3,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 78,
+			"menunummer": 63,
+			"menu_toevoeging": "A",
+			"naam": "Foe Yong Hai met Cha Sieuw Vlees",
+			"price": 11.2,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 79,
+			"menunummer": 63,
+			"menu_toevoeging": "B",
+			"naam": "Foe Yong Hai met ossenhaas",
+			"price": 16.4,
+			"soortgerecht": "EIERGERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 80,
+			"menunummer": 64,
+			"menu_toevoeging": null,
+			"naam": "Tjap Tjoy Ling Fa",
+			"price": 16.4,
+			"soortgerecht": "GROENTEN GERECHTEN (met witte rijst)",
+			"beschrijving": "ossenhaas, garnalen en kipfilet"
+		},
+		{
+			"id": 81,
+			"menunummer": 65,
+			"menu_toevoeging": null,
+			"naam": "Tjap Tjoy met varkensvlees",
+			"price": 8.8,
+			"soortgerecht": "GROENTEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 82,
+			"menunummer": 66,
+			"menu_toevoeging": null,
+			"naam": "Tjap Tjoy met kipfilet",
+			"price": 9.2,
+			"soortgerecht": "GROENTEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 83,
+			"menunummer": 67,
+			"menu_toevoeging": null,
+			"naam": "Tjap Tjoy met ossenhaas",
+			"price": 16.4,
+			"soortgerecht": "GROENTEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 84,
+			"menunummer": 68,
+			"menu_toevoeging": null,
+			"naam": "Tjap Tjoy met garnalen",
+			"price": 15.3,
+			"soortgerecht": "GROENTEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 85,
+			"menunummer": 70,
+			"menu_toevoeging": null,
+			"naam": "Babi Pangang",
+			"price": 12.2,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 86,
+			"menunummer": 71,
+			"menu_toevoeging": null,
+			"naam": "Babi Pangang in ketjapsaus",
+			"price": 12.3,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 87,
+			"menunummer": 72,
+			"menu_toevoeging": null,
+			"naam": "Cha Sieuw",
+			"price": 13.3,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": "rood geroosterd varkensvlees"
+		},
+		{
+			"id": 88,
+			"menunummer": 73,
+			"menu_toevoeging": null,
+			"naam": "Cha Sieuw in pikante saus",
+			"price": 13.8,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 89,
+			"menunummer": 74,
+			"menu_toevoeging": null,
+			"naam": "Geroosterde speenvarken",
+			"price": 13.8,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 90,
+			"menunummer": 75,
+			"menu_toevoeging": null,
+			"naam": "Koe Loe Yuk",
+			"price": 11.9,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": "bolletjes vlees met zoetzure saus"
+		},
+		{
+			"id": 91,
+			"menunummer": 76,
+			"menu_toevoeging": null,
+			"naam": "Varkenshaas met kerriesaus",
+			"price": 11.9,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 92,
+			"menunummer": 77,
+			"menu_toevoeging": null,
+			"naam": "Varkenshaas met ketjapsaus",
+			"price": 11.9,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 93,
+			"menunummer": 78,
+			"menu_toevoeging": null,
+			"naam": "Varkenshaas met tomatensaus",
+			"price": 11.9,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 94,
+			"menunummer": 78,
+			"menu_toevoeging": "A",
+			"naam": "Varkenshaas met champignons in knoflooksaus",
+			"price": 11.9,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 95,
+			"menunummer": 78,
+			"menu_toevoeging": "B",
+			"naam": "Varkenshaas met Chinese champignons",
+			"price": 12.2,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 96,
+			"menunummer": 79,
+			"menu_toevoeging": null,
+			"naam": "Varkenshaas met zwarte bonensaus",
+			"price": 12.2,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 97,
+			"menunummer": 79,
+			"menu_toevoeging": "A",
+			"naam": "Varkenshaas met verse ananas in zoetzure saus",
+			"price": 13.3,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 98,
+			"menunummer": 79,
+			"menu_toevoeging": "B",
+			"naam": "Yu Sian Yuk",
+			"price": 13.3,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": "varkenshaas met licht zoet pikante kruiden saus"
+		},
+		{
+			"id": 99,
+			"menunummer": 79,
+			"menu_toevoeging": "C",
+			"naam": "SzeChuan Yuk",
+			"price": 13.3,
+			"soortgerecht": "VLEES GERECHTEN (met witte rijst)",
+			"beschrijving": "varkenshaas met pittige kruiden saus"
+		},
+		{
+			"id": 100,
+			"menunummer": 80,
+			"menu_toevoeging": null,
+			"naam": "Ajam Pangang",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 101,
+			"menunummer": 81,
+			"menu_toevoeging": null,
+			"naam": "Ajam Pangang in ketjapsaus",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 102,
+			"menunummer": 82,
+			"menu_toevoeging": null,
+			"naam": "Koe Loe Kai",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "bolletjes kip met zoetzure saus"
+		},
+		{
+			"id": 103,
+			"menunummer": 83,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met kerriesaus",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 104,
+			"menunummer": 84,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met champignons in knoflooksaus",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 105,
+			"menunummer": 85,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met tomatensaus",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 106,
+			"menunummer": 86,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met ketjapsaus",
+			"price": 13,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 107,
+			"menunummer": 87,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met broccoli in knoflooksaus",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 108,
+			"menunummer": 88,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met Chinese champignons",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 109,
+			"menunummer": 89,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met zwarte pepersaus",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 110,
+			"menunummer": 90,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met verse ananas in zoetzure saus",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 111,
+			"menunummer": 91,
+			"menu_toevoeging": null,
+			"naam": "Kipfilet met zwarte pepersaus",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 112,
+			"menunummer": 92,
+			"menu_toevoeging": null,
+			"naam": "Tjieuw Yem Kai",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "licht gebraden kipfilet met zout en peper"
+		},
+		{
+			"id": 113,
+			"menunummer": 93,
+			"menu_toevoeging": null,
+			"naam": "Yao Koe Kai",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "kipfilet met cashewnoten in licht pikante saus"
+		},
+		{
+			"id": 114,
+			"menunummer": 94,
+			"menu_toevoeging": null,
+			"naam": "Lychee Kai",
+			"price": 13.8,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "licht gebraden kipfilet met lychee in zoetzure saus"
+		},
+		{
+			"id": 115,
+			"menunummer": 95,
+			"menu_toevoeging": null,
+			"naam": "Yu Sian Kai",
+			"price": 13.3,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "kipfilet met licht zoet pikante kruidensaus"
+		},
+		{
+			"id": 116,
+			"menunummer": 96,
+			"menu_toevoeging": null,
+			"naam": "Sze Chuan Kai",
+			"price": 13.8,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "kipfilet met pittige kruidensaus"
+		},
+		{
+			"id": 117,
+			"menunummer": 97,
+			"menu_toevoeging": null,
+			"naam": "Kung Bao Kai",
+			"price": 13.8,
+			"soortgerecht": "KIP GERECHTEN (met witte rijst)",
+			"beschrijving": "kipfilet met cashewnoten in pittige saus"
+		},
+		{
+			"id": 118,
+			"menunummer": 98,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met champignons in knoflooksaus",
+			"price": 15.9,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 119,
+			"menunummer": 99,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met tomatensaus",
+			"price": 15.9,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 120,
+			"menunummer": 100,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met ketjapsaus",
+			"price": 15.9,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 121,
+			"menunummer": 101,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met broccoli",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 122,
+			"menunummer": 102,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met Chinese champignons",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 123,
+			"menunummer": 103,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met kerriesaus",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 124,
+			"menunummer": 104,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met zwarte bonensaus",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 125,
+			"menunummer": 105,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met zwarte pepersaus",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 126,
+			"menunummer": 106,
+			"menu_toevoeging": null,
+			"naam": "Garnalen met chilisaus",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 127,
+			"menunummer": 107,
+			"menu_toevoeging": null,
+			"naam": "Yu Sian Haa",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": "garnalen met licht zoet pikante kruidensaus"
+		},
+		{
+			"id": 128,
+			"menunummer": 108,
+			"menu_toevoeging": null,
+			"naam": "Tjieuw Yem Haa",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": "licht gebraden garnalen met zout en peper"
+		},
+		{
+			"id": 129,
+			"menunummer": 109,
+			"menu_toevoeging": null,
+			"naam": "Tja Tai Haa",
+			"price": 16.1,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": "krokant gebakken garnalen"
+		},
+		{
+			"id": 130,
+			"menunummer": 110,
+			"menu_toevoeging": null,
+			"naam": "Sze Chuan Haa",
+			"price": 16.4,
+			"soortgerecht": "GARNALEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 131,
+			"menunummer": 111,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met chanpignons in knoflooksaus",
+			"price": 16.9,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 132,
+			"menunummer": 112,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met tomatensaus",
+			"price": 16.9,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 133,
+			"menunummer": 113,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met ketjapsaus",
+			"price": 16.9,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 134,
+			"menunummer": 114,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met broccoli",
+			"price": 17.1,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 135,
+			"menunummer": 115,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met Chinese champignons",
+			"price": 17.1,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 136,
+			"menunummer": 116,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met kerriesaus",
+			"price": 17.1,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 137,
+			"menunummer": 117,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met zwarte bonensaus",
+			"price": 17.1,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 138,
+			"menunummer": 118,
+			"menu_toevoeging": null,
+			"naam": "Ossenhaas met zwarte pepersaus",
+			"price": 17.1,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 139,
+			"menunummer": 119,
+			"menu_toevoeging": null,
+			"naam": "Yu Sian Ngau Yuk",
+			"price": 17.1,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": "ossenhaas met licht zoet pikante kruidensaus"
+		},
+		{
+			"id": 140,
+			"menunummer": 120,
+			"menu_toevoeging": null,
+			"naam": "Sze Chuan Ngau Yuk",
+			"price": 17.4,
+			"soortgerecht": "OSSENHAAS GERECHTEN (met witte rijst)",
+			"beschrijving": "ossenhaas met pittige kruidensaus"
+		},
+		{
+			"id": 141,
+			"menunummer": 121,
+			"menu_toevoeging": null,
+			"naam": "Visfilet met kerriesaus",
+			"price": 14.5,
+			"soortgerecht": "VISSEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 142,
+			"menunummer": 122,
+			"menu_toevoeging": null,
+			"naam": "Visfilet met oestersaus",
+			"price": 14.5,
+			"soortgerecht": "VISSEN GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 143,
+			"menunummer": 123,
+			"menu_toevoeging": null,
+			"naam": "Visfilet met zoetzure saus",
+			"price": 14.5,
+			"soortgerecht": "VISSEN GERECHTEN (met witte rijst)",
+			"beschrijving": "licht gebraden visfilet in zoete pikante saus"
+		},
+		{
+			"id": 144,
+			"menunummer": 124,
+			"menu_toevoeging": null,
+			"naam": "Hong Shau Yu",
+			"price": 14.5,
+			"soortgerecht": "VISSEN GERECHTEN (met witte rijst)",
+			"beschrijving": "licht gebraden visfilet in zoete pikante saus"
+		},
+		{
+			"id": 145,
+			"menunummer": 125,
+			"menu_toevoeging": null,
+			"naam": "Tjeuw Yem Yu",
+			"price": 15,
+			"soortgerecht": "VISSEN GERECHTEN (met witte rijst)",
+			"beschrijving": "licht gebraden visfilet met zout en peper"
+		},
+		{
+			"id": 146,
+			"menunummer": 126,
+			"menu_toevoeging": null,
+			"naam": "San Sching Po",
+			"price": 16.1,
+			"soortgerecht": "VISSEN GERECHTEN (met witte rijst)",
+			"beschrijving": "visfilet, garnalen, krab en groenten in knoflooksaus"
+		},
+		{
+			"id": 147,
+			"menunummer": null,
+			"menu_toevoeging": "P1",
+			"naam": "Geroosterde Peking Eend",
+			"price": 16.6,
+			"soortgerecht": "PEKING EEND GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 148,
+			"menunummer": null,
+			"menu_toevoeging": "P2",
+			"naam": "Peking Eend met verse ananas in zoetzure saus",
+			"price": 17.1,
+			"soortgerecht": "PEKING EEND GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 149,
+			"menunummer": null,
+			"menu_toevoeging": "P3",
+			"naam": "Peking Eend met Chinese champignons in oestersaus",
+			"price": 17.1,
+			"soortgerecht": "PEKING EEND GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 150,
+			"menunummer": null,
+			"menu_toevoeging": "P4",
+			"naam": "Yu Sian Ya",
+			"price": 17.1,
+			"soortgerecht": "PEKING EEND GERECHTEN (met witte rijst)",
+			"beschrijving": "peking eend met licht zoet pikante kruidensaus"
+		},
+		{
+			"id": 151,
+			"menunummer": null,
+			"menu_toevoeging": "T1",
+			"naam": "Tiepan Ling Fa",
+			"price": 17.9,
+			"soortgerecht": "TIEPAN SPECIALITEITEN (met witte rijst)",
+			"beschrijving": "garnalen, kipfilet, ossenhaas en groenten in zwarte pepersaus"
+		},
+		{
+			"id": 152,
+			"menunummer": null,
+			"menu_toevoeging": "T2",
+			"naam": "Tiepan Kai",
+			"price": 15.3,
+			"soortgerecht": "TIEPAN SPECIALITEITEN (met witte rijst)",
+			"beschrijving": "licht gebraden kipfilet en groenten met zoet pikante saus"
+		},
+		{
+			"id": 153,
+			"menunummer": null,
+			"menu_toevoeging": "T3",
+			"naam": "Tiepan San Yuk",
+			"price": 17.1,
+			"soortgerecht": "TIEPAN SPECIALITEITEN (met witte rijst)",
+			"beschrijving": "lichtgrbaden varkenshaas, kipfilet, ossenhaas en groenten met zoet pikante saus"
+		},
+		{
+			"id": 154,
+			"menunummer": null,
+			"menu_toevoeging": "T4",
+			"naam": "Tiepan Haa",
+			"price": 17.4,
+			"soortgerecht": "TIEPAN SPECIALITEITEN (met witte rijst)",
+			"beschrijving": "garnalen en groenten met zoet pikante saus"
+		},
+		{
+			"id": 155,
+			"menunummer": null,
+			"menu_toevoeging": "T5",
+			"naam": "Tiepan Ngau Yuk",
+			"price": 19.5,
+			"soortgerecht": "TIEPAN SPECIALITEITEN (met witte rijst)",
+			"beschrijving": "5st. ossenhaas en groenten met zoet pikante saus"
+		},
+		{
+			"id": 156,
+			"menunummer": null,
+			"menu_toevoeging": "V4",
+			"naam": "Tau Fu Po",
+			"price": 15.3,
+			"soortgerecht": "TIEPAN SPECIALITEITEN (met witte rijst)",
+			"beschrijving": "sojakaas, cha sieuw garnalen en chinese paddenstoelen"
+		},
+		{
+			"id": 157,
+			"menunummer": null,
+			"menu_toevoeging": "V1",
+			"naam": "Vegetarische Tjap Tjoy",
+			"price": 8.3,
+			"soortgerecht": "VEGETARISCHE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 158,
+			"menunummer": null,
+			"menu_toevoeging": "V2",
+			"naam": "Lo Han Zhai",
+			"price": 11.2,
+			"soortgerecht": "VEGETARISCHE GERECHTEN (met witte rijst)",
+			"beschrijving": "sojakaas, Chinese paddenstoelen en groenten in knoflooksaus"
+		},
+		{
+			"id": 159,
+			"menunummer": null,
+			"menu_toevoeging": "V3",
+			"naam": "Vegetarische Foe Yong Hai",
+			"price": 8.3,
+			"soortgerecht": "VEGETARISCHE GERECHTEN (met witte rijst)",
+			"beschrijving": null
+		},
+		{
+			"id": 160,
+			"menunummer": null,
+			"menu_toevoeging": "K1",
+			"naam": "Frites, sat&eacute; (2st.) en ei",
+			"price": 6.5,
+			"soortgerecht": "KINDERMENUS",
+			"beschrijving": null
+		},
+		{
+			"id": 161,
+			"menunummer": null,
+			"menu_toevoeging": "K2",
+			"naam": "Frites, kippootje en ei",
+			"price": 6.5,
+			"soortgerecht": "KINDERMENUS",
+			"beschrijving": null
+		},
+		{
+			"id": 162,
+			"menunummer": null,
+			"menu_toevoeging": "K3",
+			"naam": "Frites, mini loempia (2st.) en ei",
+			"price": 6.5,
+			"soortgerecht": "KINDERMENUS",
+			"beschrijving": null
+		},
+		{
+			"id": 163,
+			"menunummer": null,
+			"menu_toevoeging": "K4",
+			"naam": "Kinder Bami of Nasi met sat&eacute; (2st.) en ei",
+			"price": 6.5,
+			"soortgerecht": "KINDERMENUS",
+			"beschrijving": null
+		},
+		{
+			"id": 164,
+			"menunummer": null,
+			"menu_toevoeging": "R1",
+			"naam": "Indische rijsttafel (voor 1 persoon)",
+			"price": 16.4,
+			"soortgerecht": "RIJSTTAFELS",
+			"beschrijving": "Gado gado, Foe Yong Hai, sat&eacute;, Daging Roedjak, Daging Smoor, Ajam Ketjap, Atjar, Pisang Goreng, Pindas en Cocos"
+		},
+		{
+			"id": 165,
+			"menunummer": null,
+			"menu_toevoeging": "R2",
+			"naam": "Indische rijsttafel<br>Vanaf 2 personen... Per persoon",
+			"price": 15,
+			"soortgerecht": "RIJSTTAFELS",
+			"beschrijving": "Ajam Ketjap, Gado Gado, Daging Smoor, Kroepoek, Daging Roedjak, Foe Yong Hai, Sat&eacute;, Sambal Goreng Boontjes, Sambal Goreng Kering, Atjar, Pisang Goreng, Pinda en Cocos"
+		},
+		{
+			"id": 167,
+			"menunummer": null,
+			"menu_toevoeging": "R3",
+			"naam": "Chinese Indische Rijsttafel<br>Vanaf 4 personen... per persoon",
+			"price": 16.5,
+			"soortgerecht": "RIJSTTAFELS",
+			"beschrijving": "Foe Yong Hai, Babi Pangang, Tjap Tjoy, Koe Loe Yuk, Ajam Ketjap, Daging Smoor, Daging Roedjak, Sat&eacute;, Ei, Kroepoek, Sambal Goeren boontjes, Atjar, Pisang Goreng, Pinda en Cocos"
+		},
+		{
+			"id": 168,
+			"menunummer": null,
+			"menu_toevoeging": "R4",
+			"naam": "Chinese Rijsttafel<br>Vanaf 2 personen... per persoon",
+			"price": 17,
+			"soortgerecht": "RIJSTTAFELS",
+			"beschrijving": "Kippen- of Tomatensoep, Tjap Tjoy met kipfilet, Koe Loe Yuk, Gebakken garnalen, Babi Pangang, Foe Yong Hai, sat&eacute;, kroepoek"
+		},
+		{
+			"id": 169,
+			"menunummer": null,
+			"menu_toevoeging": "R5",
+			"naam": "Kantones Rijsttafel<br>Vanaf 2 personen... per persoon",
+			"price": 23,
+			"soortgerecht": "RIJSTTAFELS",
+			"beschrijving": "Wan Tan soep, Chinese Dim Sum (mini loempia, kerrie ko, pangsit goreng, garnalen, pasteitje), Geroosterde Peking Eend, Lychee Kai (licht gebraden kipfilet met lychee in zoetzure saus), Tau Sie Haa (garnalen met zwarte bonensaus)"
+		},
+		{
+			"id": 170,
+			"menunummer": null,
+			"menu_toevoeging": "R6",
+			"naam": "Sze Chuan Rijsttafel<br>Vanaf 2 personen... per persoon",
+			"price": 23,
+			"soortgerecht": "RIJSTTAFELS",
+			"beschrijving": "Peking Soep (pittige lichtzure soep), Chinese Dim Sum (mini loempia, kerrie ko, pangsit goreng, garnalen, pastei(tje), Tjieuw Yem Kai (licht gebakken kipfilet met zout en peper), Lychee Yuk (licht gebraden varkensvlees met lychee in zoetzure saus), Yu Sian Ngau Yuk (ossenhaas met licht zoet pikante kruiden saus)"
+		},
+		{
+			"id": 171,
+			"menunummer": null,
+			"menu_toevoeging": null,
+			"naam": "Buffet Menu A, per persoon",
+			"price": 12.8,
+			"soortgerecht": "BUFFET",
+			"beschrijving": "Mini Loempia's, Pisang Goreng, Babi Pangang, Koe Loe Yuk, Foe Yong Hai, Kipfilet met zwarte bonensaus, Tjap Tjoy met kipfilet, sat&eacute; Ajam"
+		},
+		{
+			"id": 172,
+			"menunummer": null,
+			"menu_toevoeging": null,
+			"naam": "Buffet Menu B, per persoon",
+			"price": 15,
+			"soortgerecht": "BUFFET",
+			"beschrijving": "Mini Loempia's, Pisang Goreng, Babi Pangang, Foe Yong Hai, Kung Bao Kai, Hong Shau Yu, sat&eacute; Ajam, Ossenhaas met zwarte bonensaus, Kipfilet met kerriesaus"
+		},
+		{
+			"id": 173,
+			"menunummer": null,
+			"menu_toevoeging": null,
+			"naam": "Bami of Nasi Goreng ipv rijst",
+			"price": 0.9,
+			"soortgerecht": "DIVERSEN",
+			"beschrijving": null
+		},
+		{
+			"id": 174,
+			"menunummer": null,
+			"menu_toevoeging": null,
+			"naam": "Mihoen Goreng ipv rijst",
+			"price": 2.5,
+			"soortgerecht": "DIVERSEN",
+			"beschrijving": null
+		},
+		{
+			"id": 175,
+			"menunummer": null,
+			"menu_toevoeging": null,
+			"naam": "Chinese Bami ipv rijst",
+			"price": 2.5,
+			"soortgerecht": "DIVERSEN",
+			"beschrijving": null
+		}
+	]
+}
