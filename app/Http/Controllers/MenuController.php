@@ -8,7 +8,14 @@ use Illuminate\Http\Request;
 class MenuController extends Controller
 {
     public function menukaart(){
-        return view('menu.menukaart');
+        $menuItems = Menu::orderBy('soortgerecht')
+            ->orderBy('menunummer')
+            ->orderBy('menu_toevoeging')
+            ->get();
+
+        return view('menu.menukaart', [
+            'menuItems' => $menuItems
+        ]);
     }
 
     /**

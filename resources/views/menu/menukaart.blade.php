@@ -10,11 +10,26 @@
 <h1>
     Menukaart
 </h1>
-{{-- In plaats van een menu afbeelding, data uit database tonen? --}}
-{{--@foreach($menu as $menuItem)--}}
-{{--    --}}
-{{--@endforeach--}}
 
-<img id="restaurant_menu_img" src="{{ asset('images/restaurant-menukaart-1-2.jpg') }}">
+@php
+    $groepen = $menuItems->groupBy('soortgerecht');
+@endphp
+
+<div class="groepen-container">
+    @foreach ($groepen as $soort => $gerechten)
+        <div class="gerechtgroep">
+            <h2>{{ ucfirst(strtolower($soort)) }}</h2>
+            @foreach ($gerechten as $gerecht)
+                <div class="gerecht">
+                    <strong>{!! str_replace(['{', '}'], '', $gerecht->naam) !!}</strong><br>
+                    @if (!empty($gerecht->beschrijving))
+                        <em>{!! $gerecht->beschrijving !!}</em><br>
+                    @endif
+                    €{{ number_format($gerecht->price, 2, ',', '.') }}
+                </div>
+            @endforeach
+        </div>
+    @endforeach
+</div>
 
 <x-layout2/>
