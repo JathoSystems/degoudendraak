@@ -7,20 +7,17 @@
         <table class="menu_table">
             <tr class="menu_gradient">
                 <td class="menu_middle">
-{{--                    <a href="{{ route('menu') }}">--}}
-                    <a href="/">
+                    <a href="{{ route('menukaart') }}">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menukaart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </a>
                 </td>
                 <td class="menu_middle">
-{{--                    <a href="{{ route('news') }}">--}}
-                    <a href="/">
+                    <a href="{{ route('news') }}">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Nieuws&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </a>
                 </td>
                 <td class="menu_middle">
-{{--                    <a href="{{ route('contact') }}">--}}
-                    <a href="/">
+                    <a href="{{ route('contact') }}">
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </a>
                 </td>

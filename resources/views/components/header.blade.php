@@ -7,9 +7,11 @@
 <table class="main_table">
     <tr class="first_tr">
         <td class="dragons_td">
-            <img class="header_img" src="{{ asset('images/dragon-small.png') }}" alt="Golden Dragon">
-            <span class="golden_dragon_text">De Gouden Draak</span>
-            <img class="header_img" src="{{ asset('images/dragon-small-flipped.png') }}" alt="Golden Dragon">
+            <a href="/" class="full-link">
+                <img class="header_img" src="{{ asset('images/dragon-small.png') }}" alt="Golden Dragon">
+                <span class="golden_dragon_text">De Gouden Draak</span>
+                <img class="header_img" src="{{ asset('images/dragon-small-flipped.png') }}" alt="Golden Dragon">
+            </a>
         </td>
         <td class="scrolling-text-holder">
             <a href="/">
@@ -19,9 +21,11 @@
             </a>
         </td>
         <td class="dragons_td">
-            <img class="header_img" src="{{ asset('images/dragon-small.png') }}" alt="Golden Dragon">
-            <span class="golden_dragon_text">De Gouden Draak</span>
-            <img class="header_img" src="{{ asset('images/dragon-small-flipped.png') }}" alt="Golden Dragon">
+            <a href="/" class="full-link">
+                <img class="header_img" src="{{ asset('images/dragon-small.png') }}" alt="Golden Dragon">
+                <span class="golden_dragon_text">De Gouden Draak</span>
+                <img class="header_img" src="{{ asset('images/dragon-small-flipped.png') }}" alt="Golden Dragon">
+            </a>
         </td>
     </tr>
 </table>

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SalesController;
@@ -7,8 +9,17 @@ use Illuminate\Support\Facades\Route;
 
 // Home
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+// Menu
+Route::get('/menukaart', [MenuController::class, 'menukaart'])->name('menukaart');
+
+// News
+Route::get('/nieuws', [NewsController::class, 'index'])->name('news');
+
+// Contact
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 
 Route::get('/dashboard', function () {

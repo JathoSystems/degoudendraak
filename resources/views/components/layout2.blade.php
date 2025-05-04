@@ -5,8 +5,7 @@
 </tr>
 </table>
 <br>
-{{--<a href="{{ route('contact') }}">Naar Contact</a>--}}
-<a href="/">Naar Contact</a>
+<a href="{{ route('contact') }}">Naar Contact</a>
 </td>
 
 <!-- Right lines -->

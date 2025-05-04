@@ -69,6 +69,15 @@ td {
     z-index: 1;
 }
 
+.full-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;   /* geen onderlijning */
+    color: inherit;          /* behoud dezelfde tekstkleur */
+    cursor: pointer;         /* geeft feedback dat het klikbaar is */
+}
+
 .td_width_7px {
     width: 7px;
 }

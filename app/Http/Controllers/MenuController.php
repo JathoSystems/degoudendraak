@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
+    public function menukaart(){
+        return view('menu.menukaart');
+    }
+
     /**
      * Display a listing of the menu items.
      */
