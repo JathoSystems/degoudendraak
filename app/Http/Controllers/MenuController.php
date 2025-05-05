@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Menu;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
@@ -16,6 +17,18 @@ class MenuController extends Controller
         return view('menu.menukaart', [
             'menuItems' => $menuItems
         ]);
+    }
+
+    public function menukaartPdf()
+    {
+        $menuItems = Menu::orderBy('soortgerecht')
+            ->orderBy('menunummer')
+            ->orderBy('menu_toevoeging')
+            ->get();
+
+        $pdf = Pdf::loadView('menu.menukaart-pdf', compact('menuItems'));
+
+        return $pdf->download('menukaart_degoudendraak.pdf');
     }
 
     /**

@@ -3,15 +3,9 @@
         De Gouden Draak - Menukaart
     </title>
 </head>
-
-<x-header/>
-<x-layout1/>
-
 <h1>
-    Menukaart
+    De Gouden Draak - Menukaart
 </h1>
-
-<a href="/menukaart/download">Download als PDF</a>
 
 @php
     $groepen = $menuItems->groupBy('soortgerecht');
@@ -33,5 +27,3 @@
         </div>
     @endforeach
 </div>
-
-<x-layout2/>

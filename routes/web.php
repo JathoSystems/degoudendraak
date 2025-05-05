@@ -14,6 +14,7 @@ Route::get('/', function () {
 
 // Menu
 Route::get('/menukaart', [MenuController::class, 'menukaart'])->name('menukaart');
+Route::get('/menukaart/download', [MenuController::class, 'menukaartPdf'])->name('menukaartPdf');
 
 // News
 Route::get('/nieuws', [NewsController::class, 'index'])->name('news');
