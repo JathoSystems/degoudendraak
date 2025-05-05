@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <script src="{{ asset('js/menukaart_favorieten.js') }}"></script>
 </head>
 <body>
 <table class="main_table">

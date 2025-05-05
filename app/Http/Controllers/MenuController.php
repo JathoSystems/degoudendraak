@@ -8,14 +8,26 @@ use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
-    public function menukaart(){
-        $menuItems = Menu::orderBy('soortgerecht')
-            ->orderBy('menunummer')
-            ->orderBy('menu_toevoeging')
-            ->get();
+    public function menukaart(Request $request) {
+        $favorieten = json_decode($request->cookie('favorieten', '[]'), true);
+        $menuItems = Menu::all();
+
+        // Haal alleen de favorieten op en sorteer ze alfabetisch
+        $favorieteItems = $menuItems
+            ->filter(fn($item) => in_array($item->id, $favorieten))
+            ->sortBy('naam');
+
+        // Groepeer de rest van de gerechten op soortgerecht
+        $nietFavorieteItems = $menuItems
+            ->reject(fn($item) => in_array($item->id, $favorieten))
+            ->sortBy(['soortgerecht', 'naam']);
+
+        $groepen = $nietFavorieteItems->groupBy('soortgerecht');
 
         return view('menu.menukaart', [
-            'menuItems' => $menuItems
+            'groepen' => $groepen,
+            'favorieten' => $favorieten,
+            'favorieteItems' => $favorieteItems,
         ]);
     }
 
