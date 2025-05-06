@@ -22,6 +22,14 @@ Route::get('/nieuws', [NewsController::class, 'index'])->name('news');
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
+// Locale
+Route::get('lang/{lang}', function ($lang) {
+    if (in_array($lang, ['nl','en'])) {
+        session(['locale' => $lang]);
+    }
+    return back();
+})->name('lang.switch');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
