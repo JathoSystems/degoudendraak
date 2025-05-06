@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\AdminMiddleware;
 
 // Home
 Route::get('/', function () {
@@ -41,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     // Menu management routes - only available to admin users
-    Route::middleware('admin')->group(function () {
+    Route::middleware(AdminMiddleware::class)->group(function () {
         Route::resource('menu', MenuController::class);
     });
 

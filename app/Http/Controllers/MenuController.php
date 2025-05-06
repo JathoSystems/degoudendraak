@@ -33,8 +33,7 @@ class MenuController extends Controller
 
     public function menukaartPdf()
     {
-        $menuItems = Menu::orderBy('soortgerecht')
-            ->orderBy('menunummer')
+        $menuItems = Menu::orderBy('menunummer')
             ->orderBy('menu_toevoeging')
             ->get();
 
@@ -48,8 +47,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        $menuItems = Menu::orderBy('soortgerecht')
-                        ->orderBy('menunummer')
+        $menuItems = Menu::orderBy('menunummer')
                         ->orderBy('menu_toevoeging')
                         ->get();
 

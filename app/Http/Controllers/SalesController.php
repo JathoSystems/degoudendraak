@@ -75,13 +75,8 @@ class SalesController extends Controller
      */
     public function cashDesk()
     {
-        $menuItems = Menu::orderBy('menunummer')
-                    ->orderBy('menu_toevoeging')
-                    ->get();
-
-        return view('kassa.cashdesk', [
-            'menuItems' => $menuItems
-        ]);
+        // No need to pass menu items directly - Vue will load them via API
+        return view('kassa.cashdesk');
     }
 
     /**

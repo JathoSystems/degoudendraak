@@ -58,6 +58,8 @@
                                             <td class="px-4 py-2 border-b">
                                                 @if($item->menunummer)
                                                     {{ $item->menunummer }}{{ $item->menu_toevoeging ?? '' }}
+                                                @elseif($item->menu_toevoeging)
+                                                    {{ $item->menu_toevoeging }}
                                                 @else
                                                     -
                                                 @endif
@@ -110,10 +112,10 @@
             document.getElementById('category-filter').addEventListener('change', function() {
                 const category = this.value;
                 const rows = document.querySelectorAll('tr.category-header, tr.menu-item');
-                
+
                 rows.forEach(row => {
                     const rowCategory = row.getAttribute('data-category');
-                    
+
                     if (category === 'all' || rowCategory === category) {
                         row.style.display = '';
                     } else {
