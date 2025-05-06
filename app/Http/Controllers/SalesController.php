@@ -75,8 +75,7 @@ class SalesController extends Controller
      */
     public function cashDesk()
     {
-        $menuItems = Menu::orderBy('soortgerecht')
-                    ->orderBy('menunummer')
+        $menuItems = Menu::orderBy('menunummer')
                     ->orderBy('menu_toevoeging')
                     ->get();
 

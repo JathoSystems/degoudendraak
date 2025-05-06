@@ -43,6 +43,8 @@
                                                         <span>
                                                             @if($item->menunummer)
                                                                 <strong>{{ $item->menunummer }}{{ $item->menu_toevoeging ?? '' }}.</strong>
+                                                            @elseif($item->menu_toevoeging)
+                                                                <strong>{{ $item->menu_toevoeging }}.</strong>
                                                             @endif
                                                             {{ $item->naam }}
                                                         </span>
