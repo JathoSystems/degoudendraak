@@ -17,8 +17,20 @@
                                 <!-- Menu nummer -->
                                 <div class="mb-4">
                                     <label for="menunummer" class="block text-sm font-medium text-gray-700">Menunummer</label>
-                                    <input type="number" name="menunummer" id="menunummer" value="{{ old('menunummer') }}"
-                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                    <div class="flex items-center">
+                                        <input type="number" name="menunummer" id="menunummer" value="{{ old('menunummer') }}"
+                                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                    </div>
+                                    <span class="mt-1 text-xs text-gray-500">
+                                        Hoogste menunummers in de database:
+                                        @php
+                                            $topNumbers = \App\Models\Menu::orderBy('menunummer', 'desc')
+                                                ->take(3)
+                                                ->pluck('menunummer')
+                                                ->implode(', ');
+                                            echo $topNumbers ?: 'Geen nummers gevonden';
+                                        @endphp
+                                    </span>
                                     @error('menunummer')
                                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
                                     @enderror
@@ -56,11 +68,25 @@
                             </div>
 
                             <div>
-                                <!-- Soortgerecht -->
+                                <!-- Soortgerecht with autocomplete -->
                                 <div class="mb-4">
                                     <label for="soortgerecht" class="block text-sm font-medium text-gray-700">Categorie <span class="text-red-500">*</span></label>
-                                    <input type="text" name="soortgerecht" id="soortgerecht" value="{{ old('soortgerecht') }}" required
-                                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                    <div class="relative">
+                                        <input type="text" name="soortgerecht" id="soortgerecht" value="{{ old('soortgerecht') }}" required
+                                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                            list="soortgerecht-options">
+                                        <datalist id="soortgerecht-options">
+                                            @php
+                                                $categories = \App\Models\Menu::select('soortgerecht')
+                                                    ->distinct()
+                                                    ->orderBy('soortgerecht')
+                                                    ->pluck('soortgerecht');
+                                            @endphp
+                                            @foreach($categories as $category)
+                                                <option value="{{ $category }}">
+                                            @endforeach
+                                        </datalist>
+                                    </div>
                                     <p class="text-xs text-gray-500 mt-1">Bijvoorbeeld: SOEP, VOORGERECHT, BAMI EN NASI GERECHTEN, etc.</p>
                                     @error('soortgerecht')
                                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
