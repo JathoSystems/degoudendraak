@@ -2,7 +2,7 @@
     <div class="border p-4 rounded-lg bg-white">
         <h3 class="text-lg font-semibold mb-4">Huidige Bestelling</h3>
 
-        <div class="mb-4 h-[42.5rem] overflow-y-auto border rounded-md p-2">
+        <div class="mb-4 h-[40rem] overflow-y-auto border rounded-md p-2">
             <table class="min-w-full" id="order-items">
                 <thead>
                     <tr class="border-b">
