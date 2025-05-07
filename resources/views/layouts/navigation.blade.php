@@ -15,6 +15,17 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('kassa.cashdesk')" :active="request()->routeIs('kassa.cashdesk')">
+                        {{ __('Kassa') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('kassa.overview')" :active="request()->routeIs('kassa.overview')">
+                        {{ __('Verkoopoverzicht') }}
+                    </x-nav-link>
+                    @if(Auth::user()->isAdmin)
+                        <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                            {{ __('Menu Beheer') }}
+                        </x-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -70,6 +81,18 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('kassa.cashdesk')" :active="request()->routeIs('kassa.cashdesk')">
+                {{ __('Kassa') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('kassa.overview')" :active="request()->routeIs('kassa.overview')">
+                {{ __('Verkoopoverzicht') }}
+            </x-responsive-nav-link>
+            @if(Auth::user()->isAdmin)
+                <x-responsive-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
+                    {{ __('Menu Beheer') }}
+                </x-responsive-nav-link>
+            @endif
+
         </div>
 
         <!-- Responsive Settings Options -->
