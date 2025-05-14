@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Middleware\SetLocale;
+use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -14,16 +15,15 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // Register our AdminMiddleware
         $middleware->alias([
             'admin' => AdminMiddleware::class,
         ]);
 
-//        $middleware->append(SetLocale::class);
-
         $middleware->alias([
             'setLocale' => SetLocale::class,
         ]);
+
+        EncryptCookies::except('favorieten');
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
