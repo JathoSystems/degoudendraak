@@ -308,3 +308,16 @@ a {
     color: #000;
     text-decoration: none;
 }
+
+/* Language switcher */
+.language-switcher {
+    display: inline-block;
+    text-align: center;
+}
+.language-switcher a {
+    padding: 0 5px;
+    text-decoration: none;
+}
+.language-switcher a.active {
+    font-weight: bold;
+}

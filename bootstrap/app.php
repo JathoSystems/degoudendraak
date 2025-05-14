@@ -16,14 +16,21 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
-            'admin' => AdminMiddleware::class,
-        ]);
-
-        $middleware->alias([
+            'admin'     => AdminMiddleware::class,
             'setLocale' => SetLocale::class,
         ]);
 
         EncryptCookies::except('favorieten');
+
+        $middleware->prependToGroup(
+            'web',
+            \Illuminate\Session\Middleware\StartSession::class
+        );
+
+        $middleware->appendToGroup(
+            'web',
+            SetLocale::class
+        );
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -21,6 +21,13 @@
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     </a>
                 </td>
+                <td class="menu_middle">
+                    <div class="language-switcher">
+                        <a href="{{ route('lang.switch', 'nl') }}" class="{{ app()->getLocale() == 'nl' ? 'active' : '' }}">NL</a>
+                        |
+                        <a href="{{ route('lang.switch', 'en') }}" class="{{ app()->getLocale() == 'en' ? 'active' : '' }}">EN</a>
+                    </div>
+                </td>
             </tr>
         </table>
     </td>
