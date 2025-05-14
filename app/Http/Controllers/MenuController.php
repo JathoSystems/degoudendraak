@@ -12,12 +12,10 @@ class MenuController extends Controller
         $favorieten = json_decode($request->cookie('favorieten', '[]'), true);
         $menuItems = Menu::all();
 
-        // Haal alleen de favorieten op en sorteer ze alfabetisch
         $favorieteItems = $menuItems
             ->filter(fn($item) => in_array($item->id, $favorieten))
             ->sortBy('naam');
 
-        // Groepeer de rest van de gerechten op soortgerecht
         $nietFavorieteItems = $menuItems
             ->reject(fn($item) => in_array($item->id, $favorieten))
             ->sortBy(['soortgerecht', 'naam']);
