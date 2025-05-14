@@ -1,6 +1,6 @@
 <head>
     <title>
-        De Gouden Draak - Contact
+        {{ __("De Gouden Draak - Contact")}}
     </title>
 </head>
 
@@ -8,10 +8,10 @@
 <x-layout1/>
 
 <h1>
-    Contact
+    {{ __("Contact")}}
 </h1>
 
-<h3>De Gouden Draak is eenvoudig te vinden, vlak bij het centrum, 5 minuten lopen achter het centraal station.
+<h3>{{ __("De Gouden Draak is eenvoudig te vinden, vlak bij het centrum, 5 minuten lopen achter het centraal station.")}}
     <br>
     <br>
     Onderwijsboulevard 215, kamer OG112<br> 5223 DE 's-Hertogenbosch

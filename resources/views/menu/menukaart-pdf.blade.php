@@ -1,10 +1,10 @@
 <head>
     <title>
-        De Gouden Draak - Menukaart
+        {{ __("De Gouden Draak - Menukaart")}}
     </title>
 </head>
 <h1>
-    De Gouden Draak - Menukaart
+    {{ __("De Gouden Draak - Menukaart")}}
 </h1>
 
 @php

@@ -1,19 +1,19 @@
 <head>
     <title>
-        De Gouden Draak - Menukaart
+        {{ __("De Gouden Draak - Menukaart")}}
     </title>
 </head>
 
 <x-header/>
 <x-layout1/>
 
-<h1>Menukaart</h1>
+<h1>{{ __("Menukaart")}}</h1>
 
-<button><a href="/menukaart/download" class="url">Download als PDF</a></button>
+<button><a href="/menukaart/download" class="url">{{ __("Download als PDF")}}</a></button>
 
 @if($favorieteItems->isNotEmpty())
     <div class="gerechtgroep">
-        <h2>Favorieten</h2>
+        <h2>{{ __("Favorieten")}}</h2>
         @foreach ($favorieteItems as $gerecht)
             <div class="gerecht">
                 <strong>{!! str_replace(['{', '}'], '', $gerecht->naam) !!}</strong>
