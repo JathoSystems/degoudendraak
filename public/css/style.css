@@ -303,3 +303,8 @@ a {
 .favoriet-heart.favoriet {
     color: red;
 }
+
+.url {
+    color: #000;
+    text-decoration: none;
+}

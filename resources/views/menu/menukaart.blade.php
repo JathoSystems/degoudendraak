@@ -9,7 +9,7 @@
 
 <h1>Menukaart</h1>
 
-<a href="/menukaart/download">Download als PDF</a>
+<button><a href="/menukaart/download" class="url">Download als PDF</a></button>
 
 @if($favorieteItems->isNotEmpty())
     <div class="gerechtgroep">
