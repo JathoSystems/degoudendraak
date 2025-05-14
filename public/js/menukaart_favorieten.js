@@ -1,12 +1,46 @@
 document.addEventListener('DOMContentLoaded', function () {
     const hearts = document.querySelectorAll('.favoriet-heart');
 
-    // Laad favorieten uit localStorage of cookie
-    let favorieten = JSON.parse(localStorage.getItem('favorieten') || '[]');
+    // Helper function to get cookie by name
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
 
-    // Initialiseer visueel de juiste hartjes
+    // Helper function to set cookie
+    function setCookie(name, value, days) {
+        let expires = "";
+        if (days) {
+            const date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    // Initialize hearts based on cookie
+    let favorieten = [];
+    const favorietenCookie = getCookie('favorieten');
+
+    if (favorietenCookie) {
+        try {
+            favorieten = JSON.parse(favorietenCookie);
+            // Make sure it's an array
+            if (!Array.isArray(favorieten)) {
+                favorieten = [];
+            }
+        } catch (e) {
+            // Reset if we can't parse the cookie
+            favorieten = [];
+        }
+    }
+
+    // Initialize the hearts
     hearts.forEach(heart => {
         const id = heart.dataset.id;
+
         if (favorieten.includes(id)) {
             heart.classList.add('favoriet');
         }
@@ -14,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         heart.addEventListener('click', function () {
             const id = this.dataset.id;
 
+            // Toggle favorite status
             if (favorieten.includes(id)) {
                 favorieten = favorieten.filter(fav => fav !== id);
                 this.classList.remove('favoriet');
@@ -22,8 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 this.classList.add('favoriet');
             }
 
-            localStorage.setItem('favorieten', JSON.stringify(favorieten));
-            document.cookie = "favorieten=" + JSON.stringify(favorieten) + "; path=/; max-age=" + (60 * 60 * 24 * 30);
+            setCookie('favorieten', JSON.stringify(favorieten), 30);
+
+            window.location.reload();
         });
     });
+
+    console.log('Current favorites:', favorieten);
+    console.log('Cookie value:', getCookie('favorieten'));
 });
