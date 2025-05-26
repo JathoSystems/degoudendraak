@@ -5,6 +5,8 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\TableController;
+use App\Http\Controllers\TabletOrderController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 
@@ -25,7 +27,7 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 
 // Locale
 Route::get('lang/{lang}', function ($lang) {
-    if (in_array($lang, ['nl','en'])) {
+    if (in_array($lang, ['nl', 'en'])) {
         session(['locale' => $lang]);
     }
     return back();
@@ -56,6 +58,20 @@ Route::middleware('auth')->group(function () {
 
     // Sales management routes
     Route::resource('sales', SalesController::class)->except(['edit', 'update']);
+
+    // Table management routes
+    Route::resource('tables', TableController::class);
+    Route::put('tables/{table}/reset', [TableController::class, 'reset'])->name('tables.reset');
+    Route::post('tables/{table}/people', [TableController::class, 'addPerson'])->name('tables.people.store');
+    Route::delete('tables/{table}/people/{person}', [TableController::class, 'destroyPerson'])->name('tables.people.destroy');
+    Route::post('tables/{table}/tablet', [TableController::class, 'addTablet'])->name('tables.tablet.store');
+    Route::delete('tables/{table}/tablet', [TableController::class, 'destroyTablet'])->name('tables.tablet.destroy');
 });
 
-require __DIR__.'/auth.php';
+// Tablet ordering routes (accessible without authentication)
+Route::prefix('tablet')->group(function () {
+    Route::get('order/{token}', [TabletOrderController::class, 'show'])->name('tablet.order');
+    Route::post('order/{token}', [TabletOrderController::class, 'placeOrder'])->name('tablet.order.place');
+});
+
+require __DIR__ . '/auth.php';

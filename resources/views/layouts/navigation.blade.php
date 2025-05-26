@@ -25,6 +25,9 @@
                         <x-nav-link :href="route('menu.index')" :active="request()->routeIs('menu.index')">
                             {{ __('Menu Beheer') }}
                         </x-nav-link>
+                        <x-nav-link :href="route('tables.index')" :active="request()->routeIs('tables.*')">
+                            {{ __('Tafel Beheer') }}
+                        </x-nav-link>
                     @endif
                 </div>
             </div>

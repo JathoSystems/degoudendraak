@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    @if(session('error'))
+                    @if (session('error'))
                         <div class="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-6" role="alert">
                             {{ session('error') }}
                         </div>
@@ -25,7 +25,8 @@
                             </div>
                             <div class="p-4 bg-white">
                                 <p class="text-gray-700 mb-4">Verwerk bestellingen en voeg verkopen toe.</p>
-                                <a href="{{ route('kassa.cashdesk') }}" class="text-indigo-600 hover:text-indigo-800 font-medium">
+                                <a href="{{ route('kassa.cashdesk') }}"
+                                    class="text-indigo-600 hover:text-indigo-800 font-medium">
                                     Naar de kassa →
                                 </a>
                             </div>
@@ -38,25 +39,41 @@
                             </div>
                             <div class="p-4 bg-white">
                                 <p class="text-gray-700 mb-4">Bekijk verkoopcijfers en omzet.</p>
-                                <a href="{{ route('kassa.overview') }}" class="text-green-600 hover:text-green-800 font-medium">
+                                <a href="{{ route('kassa.overview') }}"
+                                    class="text-green-600 hover:text-green-800 font-medium">
                                     Bekijk overzicht →
                                 </a>
                             </div>
                         </div>
 
                         <!-- Menu Beheer (alleen voor admins) -->
-                        @if(Auth::user()->isAdmin)
-                        <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                            <div class="bg-amber-500 text-white p-4">
-                                <h3 class="text-xl font-semibold">Menu Beheer</h3>
+                        @if (Auth::user()->isAdmin)
+                            <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                                <div class="bg-amber-500 text-white p-4">
+                                    <h3 class="text-xl font-semibold">Menu Beheer</h3>
+                                </div>
+                                <div class="p-4 bg-white">
+                                    <p class="text-gray-700 mb-4">Beheer menu items, prijzen en categorieën.</p>
+                                    <a href="{{ route('menu.index') }}"
+                                        class="text-amber-600 hover:text-amber-800 font-medium">
+                                        Menu beheren →
+                                    </a>
+                                </div>
                             </div>
-                            <div class="p-4 bg-white">
-                                <p class="text-gray-700 mb-4">Beheer menu items, prijzen en categorieën.</p>
-                                <a href="{{ route('menu.index') }}" class="text-amber-600 hover:text-amber-800 font-medium">
-                                    Menu beheren →
-                                </a>
+
+                            <!-- Tafel Beheer (alleen voor admins) -->
+                            <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                                <div class="bg-purple-500 text-white p-4">
+                                    <h3 class="text-xl font-semibold">Tafel Beheer</h3>
+                                </div>
+                                <div class="p-4 bg-white">
+                                    <p class="text-gray-700 mb-4">Beheer tafels, personen en tablet bestellingen.</p>
+                                    <a href="{{ route('tables.index') }}"
+                                        class="text-purple-600 hover:text-purple-800 font-medium">
+                                        Tafels beheren →
+                                    </a>
+                                </div>
                             </div>
-                        </div>
                         @endif
                     </div>
                 </div>
