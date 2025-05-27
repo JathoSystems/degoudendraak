@@ -43,7 +43,7 @@
 
         <!-- Max rounds reached -->
         <div
-            v-else-if="parseInt(tableRound) >= 5"
+            v-else-if="parseInt(tableRound) > 5"
             class="mb-6 bg-red-50 border border-red-200 rounded-lg p-4"
         >
             <div class="flex items-center">
@@ -216,7 +216,7 @@
                         orderItems.length === 0 ||
                         loading ||
                         !canPlaceOrder ||
-                        parseInt(tableRound) >= 5
+                        parseInt(tableRound) > 5
                     "
                 >
                     <span v-if="loading">
@@ -245,7 +245,7 @@
                     <span v-else-if="!canPlaceOrder && waitTime > 0">
                         ⏳ Wacht nog {{ waitTime }} minuten
                     </span>
-                    <span v-else-if="parseInt(tableRound) >= 5">
+                    <span v-else-if="parseInt(tableRound) > 5">
                         🚫 Max rondes bereikt
                     </span>
                     <span v-else> 🍽️ Bestelling Plaatsen </span>

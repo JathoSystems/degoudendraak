@@ -29,11 +29,13 @@ class TableController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'capacity' => 'required|integer|min:1|max:20',
+            'extra_deluxe_menu' => 'boolean', // Optional field for extra deluxe menu, defaults to false
         ]);
 
         // Set default values
         $validatedData['round'] = 1;
         $validatedData['last_ordered_at'] = null;
+        $validatedData['extra_deluxe_menu'] = $validatedData['extra_deluxe_menu'] ?? false;
 
         Table::create($validatedData);
 
@@ -52,7 +54,11 @@ class TableController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'capacity' => 'required|integer|min:1|max:20',
+            'extra_deluxe_menu' => 'boolean', // Optional field for extra deluxe menu, defaults to false
         ]);
+
+        // Set default values
+        $validatedData['extra_deluxe_menu'] = $validatedData['extra_deluxe_menu'] ?? false;
 
         $table = Table::findOrFail($id);
         $table->update($validatedData);
@@ -64,14 +70,15 @@ class TableController extends Controller
     public function reset($id)
     {
         $table = Table::findOrFail($id);
-        
+
         // Delete all people from the table
         $table->people()->delete();
-        
+
         // Reset table status
         $table->update([
             'round' => 1,
-            'last_ordered_at' => null
+            'last_ordered_at' => null,
+            'extra_deluxe_menu' => false,
         ]);
 
         return redirect()->route('tables.show', $table)

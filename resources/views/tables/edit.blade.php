@@ -1,62 +1,58 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Tafel Bewerken') }}
+        </h2>
+    </x-slot>
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header d-flex justify-content-between align-items-center">
-                    <h4>Edit Table {{ $table->name }}</h4>
-                    <a href="{{ route('tables.show', $table) }}" class="btn btn-secondary">Back to Table</a>
-                </div>
-
-                <div class="card-body">
-                    <form method="POST" action="{{ route('tables.update', $table) }}">
+    <div class="py-12">
+        <div class="max-w-md mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 text-gray-900">
+                    <form method="POST" action="{{ route('tables.update', $table->id) }}">
                         @csrf
                         @method('PUT')
 
-                        <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Table Name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
-                                       name="name" value="{{ old('name', $table->name) }}" required autocomplete="name" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                        <div class="mb-4">
+                            <label for="name" class="block text-sm font-medium text-gray-700">Tafelnaam</label>
+                            <input type="text" name="name" id="name" value="{{ old('name', $table->name) }}" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            @error('name')
+                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="capacity" class="col-md-4 col-form-label text-md-end">{{ __('Capacity') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="capacity" type="number" class="form-control @error('capacity') is-invalid @enderror"
-                                       name="capacity" value="{{ old('capacity', $table->capacity) }}" required autocomplete="capacity" min="1" max="20">
-
-                                @error('capacity')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
+                        <div class="mb-4">
+                            <label for="capacity" class="block text-sm font-medium text-gray-700">Capaciteit</label>
+                            <input type="number" name="capacity" id="capacity" value="{{ old('capacity', $table->capacity) }}" min="1" max="20" required
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                            @error('capacity')
+                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
                         </div>
 
-                        <div class="row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Update Table') }}
-                                </button>
-                                <a href="{{ route('tables.show', $table) }}" class="btn btn-secondary">Cancel</a>
-                            </div>
+                        <div class="mb-4">
+                            <label for="extra_deluxe_menu" class="flex items-center">
+                                <input type="checkbox" name="extra_deluxe_menu" id="extra_deluxe_menu" value="1" {{ old('extra_deluxe_menu', $table->extra_deluxe_menu) ? 'checked' : '' }}
+                                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                <span class="ml-2 text-sm font-medium text-gray-700">Extra Deluxe Menu</span>
+                            </label>
+                            @error('extra_deluxe_menu')
+                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <div class="flex justify-between">
+                            <a href="{{ route('tables.index') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
+                                Terug
+                            </a>
+                            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                Tafel Toevoegen
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@endsection
+</x-app-layout>

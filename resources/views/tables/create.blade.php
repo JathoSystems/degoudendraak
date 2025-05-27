@@ -30,6 +30,17 @@
                             @enderror
                         </div>
 
+                        <div class="mb-4">
+                            <label for="extra_deluxe_menu" class="flex items-center">
+                                <input type="checkbox" name="extra_deluxe_menu" id="extra_deluxe_menu" value="1" {{ old('extra_deluxe_menu') ? 'checked' : '' }}
+                                    class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                                <span class="ml-2 text-sm font-medium text-gray-700">Extra Deluxe Menu</span>
+                            </label>
+                            @error('extra_deluxe_menu')
+                                <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
+                            @enderror
+                        </div>
+
                         <div class="flex justify-between">
                             <a href="{{ route('tables.index') }}" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded">
                                 Terug

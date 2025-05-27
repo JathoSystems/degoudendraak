@@ -13,6 +13,7 @@ class Table extends Model
         'capacity',
         'round',
         'last_ordered_at',
+        'extra_deluxe_menu',
     ];
 
     protected $casts = [

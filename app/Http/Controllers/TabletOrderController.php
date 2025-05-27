@@ -65,7 +65,7 @@ class TabletOrderController extends Controller
             DB::commit();
 
             $message = 'Bestelling succesvol geplaatst!';
-            if ($tablet->table->round >= 5) {
+            if ($tablet->table->round > 5) {
                 $message .= ' Dit was uw laatste ronde.';
             } else {
                 $message .= ' Volgende ronde over 10 minuten.';
@@ -84,7 +84,7 @@ class TabletOrderController extends Controller
     private function canPlaceOrder($table)
     {
         // Check if table has reached max rounds
-        if ($table->round >= 5) {
+        if ($table->round > 5) {
             return false;
         }
 

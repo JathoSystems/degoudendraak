@@ -51,6 +51,7 @@
                                                 Geen tablet toegewezen
                                             @endif
                                         </p>
+                                        <p><strong>Extra Deluxe Menu:</strong> {{ $table->extra_deluxe_menu ? 'Ja' : 'Nee' }}</p>
                                     </div>
 
                                     <div class="flex justify-between">

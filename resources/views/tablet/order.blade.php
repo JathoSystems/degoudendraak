@@ -29,11 +29,11 @@
                                 Laatste bestelling: {{ $tablet->table->last_ordered_at->diffForHumans() }}
                             </p>
                         @endif
-                        @if (!$canOrder && $tablet->table->round < 5)
+                        @if (!$canOrder && $tablet->table->round <= 5)
                             <p class="text-yellow-200 text-sm font-semibold">
                                 Wacht nog {{ round($waitTime) }} minuten
                             </p>
-                        @elseif($tablet->table->round >= 5)
+                        @elseif($tablet->table->round > 5)
                             <p class="text-red-200 text-sm font-semibold">
                                 Maximaal aantal rondes bereikt
                             </p>
