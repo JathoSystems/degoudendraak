@@ -9,6 +9,7 @@ class Sale extends Model
 {
     protected $fillable = [
         'itemId',
+        'table_id',
         'amount',
         'saleDate'
     ];
@@ -23,5 +24,13 @@ class Sale extends Model
     public function menuItem(): BelongsTo
     {
         return $this->belongsTo(Menu::class, 'itemId');
+    }
+
+    /**
+     * Get the table this sale belongs to (optional)
+     */
+    public function table(): BelongsTo
+    {
+        return $this->belongsTo(Table::class);
     }
 }

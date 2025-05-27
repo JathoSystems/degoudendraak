@@ -39,4 +39,33 @@ class Table extends Model
     {
         return $this->hasOne(Tablet::class);
     }
+
+    /**
+     * Get the sales associated with the table.
+     *
+     * @return HasMany<Sale>
+     */
+    public function sales(): HasMany
+    {
+        return $this->hasMany(Sale::class);
+    }
+
+    /**
+     * Get the sales from the last round for re-ordering
+     */
+    public function lastRoundSales()
+    {
+        if (!$this->last_ordered_at) {
+            return collect();
+        }
+
+        // Get sales from the last ordering session (within a 10-minute window around last_ordered_at)
+        $startTime = $this->last_ordered_at->copy()->subMinutes(5);
+        $endTime = $this->last_ordered_at->copy()->addMinutes(5);
+
+        return $this->sales()
+            ->with('menuItem')
+            ->whereBetween('saleDate', [$startTime, $endTime])
+            ->get();
+    }
 }

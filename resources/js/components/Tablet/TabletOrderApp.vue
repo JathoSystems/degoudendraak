@@ -96,6 +96,10 @@ export default {
             type: String,
             required: true,
         },
+        reorderUrl: {
+            type: String,
+            required: true,
+        },
     },
     data() {
         return {
@@ -308,6 +312,57 @@ export default {
                         "error"
                     );
                     console.error("Error placing order:", error);
+                });
+        },
+
+        reorderLastRound() {
+            fetch(this.reorderUrl, {
+                method: "GET",
+                headers: {
+                    "X-CSRF-TOKEN": this.csrfToken,
+                },
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.success && data.items.length > 0) {
+                        // Clear current order
+                        this.orderItems = [];
+                        
+                        // Add items from last round to current order
+                        data.items.forEach((item) => {
+                            const existingItemIndex = this.orderItems.findIndex(
+                                (orderItem) => orderItem.id === item.id
+                            );
+
+                            if (existingItemIndex >= 0) {
+                                this.orderItems[existingItemIndex].quantity += item.amount;
+                            } else {
+                                this.orderItems.push({
+                                    id: item.id,
+                                    name: item.name,
+                                    price: item.price,
+                                    quantity: item.amount,
+                                });
+                            }
+                        });
+
+                        this.showNotification(
+                            `${data.items.length} items van de laatste ronde toegevoegd!`,
+                            "success"
+                        );
+                    } else {
+                        this.showNotification(
+                            "Geen items gevonden van de laatste ronde.",
+                            "error"
+                        );
+                    }
+                })
+                .catch((error) => {
+                    this.showNotification(
+                        "Er is een fout opgetreden bij het ophalen van de laatste ronde.",
+                        "error"
+                    );
+                    console.error("Error reordering:", error);
                 });
         },
     },

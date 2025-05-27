@@ -29,6 +29,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Pass any props from the element's data attributes
             ...tabletOrderElement.dataset
         });
-        tabletOrderApp.mount(tabletOrderElement);
+
+        const mountedApp = tabletOrderApp.mount(tabletOrderElement);
+
+        // Handle reorder button click
+        const reorderButton = document.getElementById('reorder-last-round');
+        if (reorderButton) {
+            reorderButton.addEventListener('click', () => {
+                mountedApp.reorderLastRound();
+            });
+        }
     }
 });

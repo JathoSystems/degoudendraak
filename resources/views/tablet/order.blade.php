@@ -45,13 +45,35 @@
 
         <!-- Main Content -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Quick Actions -->
+            <div class="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                @if($tablet->table->last_ordered_at)
+                    <button
+                        id="reorder-last-round"
+                        class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                    >
+                        <span>🔄</span>
+                        <span>Herhaal Laatste Ronde</span>
+                    </button>
+                @endif
+
+                <a
+                    href="{{ route('tablet.receipt', ['token' => $tablet->token]) }}"
+                    class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center space-x-2"
+                >
+                    <span>🧾</span>
+                    <span>Bekijk Rekening</span>
+                </a>
+            </div>
+
             <!-- Vue app mount point for tablet ordering -->
             <div id="tablet-order-app" data-api-url="{{ route('tablet.order.place', ['token' => $tablet->token]) }}"
                 data-csrf-token="{{ csrf_token() }}" data-table-name="{{ $tablet->table->name }}"
                 data-table-round="{{ $tablet->table->round }}" data-can-order="{{ $canOrder ? 'true' : 'false' }}"
                 data-wait-time="{{ round($waitTime) }}" data-average-wait-time="10"
                 data-last-ordered-at="{{ $tablet->table->last_ordered_at ? $tablet->table->last_ordered_at->toISOString() : '' }}"
-                data-people-count="{{ $tablet->table->people->count() }}">
+                data-people-count="{{ $tablet->table->people->count() }}"
+                data-reorder-url="{{ route('tablet.order.last-round', ['token' => $tablet->token]) }}">
             </div>
         </div>
     </div>

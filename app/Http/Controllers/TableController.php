@@ -28,7 +28,7 @@ class TableController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'capacity' => 'required|integer|min:1|max:20',
+            'capacity' => 'required|integer|min:1|max:8',
             'extra_deluxe_menu' => 'boolean', // Optional field for extra deluxe menu, defaults to false
         ]);
 
@@ -53,7 +53,7 @@ class TableController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
-            'capacity' => 'required|integer|min:1|max:20',
+            'capacity' => 'required|integer|min:1|max:8',
             'extra_deluxe_menu' => 'boolean', // Optional field for extra deluxe menu, defaults to false
         ]);
 
@@ -74,6 +74,9 @@ class TableController extends Controller
         // Delete all people from the table
         $table->people()->delete();
 
+        // Remove table association from all sales
+        $table->sales()->update(['table_id' => null]);
+
         // Reset table status
         $table->update([
             'round' => 1,
@@ -82,7 +85,7 @@ class TableController extends Controller
         ]);
 
         return redirect()->route('tables.show', $table)
-            ->with('success', 'Tafel succesvol gereset. Alle personen zijn verwijderd.');
+            ->with('success', 'Tafel succesvol gereset. Alle personen en verkoop associaties zijn verwijderd.');
     }
 
     public function destroy($id)
@@ -101,6 +104,13 @@ class TableController extends Controller
         ]);
 
         $table = Table::findOrFail($tableId);
+
+        // Check if adding another person would exceed the table's capacity
+        if ($table->people()->count() >= $table->capacity) {
+            return redirect()->route('tables.show', $tableId)
+                ->with('error', 'Kan geen persoon toevoegen. Tafel heeft al de maximale capaciteit van ' . $table->capacity . ' personen bereikt.');
+        }
+
         $table->people()->create($validatedData);
 
         return redirect()->route('tables.show', $tableId)
