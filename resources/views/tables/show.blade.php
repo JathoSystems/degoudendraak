@@ -38,7 +38,7 @@
                             @csrf
                             @method('PUT')
                             <button type="submit" class="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded"
-                                onclick="return confirm('Weet je zeker dat je deze tafel wilt resetten? Dit zet de ronde terug naar 1 en wist de laatste bestelling.')">
+                                onclick="return confirm('Weet je zeker dat je deze tafel wilt resetten? Dit zet de ronde terug naar 1, wist de laatste bestelling en verwijdert alle personen van de tafel.')">
                                 Tafel Resetten
                             </button>
                         </form>

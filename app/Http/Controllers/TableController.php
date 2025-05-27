@@ -64,13 +64,18 @@ class TableController extends Controller
     public function reset($id)
     {
         $table = Table::findOrFail($id);
+        
+        // Delete all people from the table
+        $table->people()->delete();
+        
+        // Reset table status
         $table->update([
             'round' => 1,
             'last_ordered_at' => null
         ]);
 
         return redirect()->route('tables.show', $table)
-            ->with('success', 'Table reset successfully.');
+            ->with('success', 'Tafel succesvol gereset. Alle personen zijn verwijderd.');
     }
 
     public function destroy($id)

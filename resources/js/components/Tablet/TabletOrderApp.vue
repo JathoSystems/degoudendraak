@@ -113,6 +113,7 @@ export default {
             currentWaitTime: 0,
             canPlaceOrder: true,
             timer: null,
+            localLastOrderedAt: "",
         };
     },
     computed: {
@@ -212,9 +213,10 @@ export default {
             // Initialize current state from props
             this.canPlaceOrder = this.canOrder === "true";
             this.currentWaitTime = parseFloat(this.waitTime);
+            this.localLastOrderedAt = this.lastOrderedAt;
 
             // If there's a last order time and we can't order, start the timer
-            if (this.lastOrderedAt && !this.canPlaceOrder) {
+            if (this.localLastOrderedAt && !this.canPlaceOrder) {
                 this.startWaitTimer();
             }
         },
@@ -232,11 +234,11 @@ export default {
         },
 
         updateWaitTime() {
-            if (!this.lastOrderedAt) {
+            if (!this.localLastOrderedAt) {
                 return;
             }
 
-            const lastOrderTime = new Date(this.lastOrderedAt);
+            const lastOrderTime = new Date(this.localLastOrderedAt);
             const now = new Date();
             const minutesPassed = (now - lastOrderTime) / (1000 * 60);
             const averageWait = parseFloat(this.averageWaitTime);
@@ -289,7 +291,7 @@ export default {
                         // Update order status and start new wait timer
                         this.canPlaceOrder = false;
                         this.currentWaitTime = parseFloat(this.averageWaitTime);
-                        this.lastOrderedAt = new Date().toISOString();
+                        this.localLastOrderedAt = new Date().toISOString();
                         this.startWaitTimer();
                     } else {
                         this.showNotification(
