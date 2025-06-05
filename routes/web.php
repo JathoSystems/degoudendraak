@@ -7,6 +7,7 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\TabletOrderController;
+use App\Http\Controllers\TakeawayController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 
@@ -32,6 +33,11 @@ Route::get('lang/{lang}', function ($lang) {
     }
     return back();
 })->name('lang.switch');
+
+// Takeaway
+Route::get('/takeaway', [TakeawayController::class, 'index'])->name('takeaway.index');
+Route::post('/takeaway', [TakeawayController::class, 'store'])->name('takeaway.store');
+Route::get('/takeaway/thank-you/{order}', [TakeawayController::class, 'thankYou'])->name('takeaway.thank-you');
 
 
 Route::get('/dashboard', function () {
