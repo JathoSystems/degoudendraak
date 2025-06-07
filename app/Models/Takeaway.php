@@ -22,9 +22,8 @@ class Takeaway extends Model
 
     public function menuItems(): BelongsToMany
     {
-        return $this->belongsToMany(Menu::class, 'takeaway_order_items')
+        return $this->belongsToMany(Menu::class, 'takeaway_items', 'takeaway_order_id', 'menu_id')
             ->withPivot('quantity')
             ->withTimestamps();
     }
-
 }

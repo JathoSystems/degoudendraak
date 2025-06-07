@@ -2,6 +2,16 @@
     <title>
         {{ __("De Gouden Draak - Afhalen")}}
     </title>
+    <script>
+        function updateSelection(selectElement, itemId) {
+            const hiddenInput = document.getElementById(`menu-item-${itemId}`);
+            if (parseInt(selectElement.value) > 0) {
+                hiddenInput.disabled = false;
+            } else {
+                hiddenInput.disabled = true;
+            }
+        }
+    </script>
 </head>
 
 <x-header/>
@@ -90,13 +100,3 @@
     </div>
 <x-layout2/>
 
-<script>
-    function updateSelection(selectElement, itemId) {
-        const hiddenInput = document.getElementById(`menu-item-${itemId}`);
-        if (parseInt(selectElement.value) > 0) {
-            hiddenInput.disabled = false;
-        } else {
-            hiddenInput.disabled = true;
-        }
-    }
-</script>

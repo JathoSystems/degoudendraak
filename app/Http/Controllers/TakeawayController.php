@@ -26,7 +26,7 @@ class TakeawayController extends Controller
             'customer_phone' => 'required|string|max:20',
             'pickup_time' => 'required|date|after:now',
             'menu_items' => 'required|array',
-            'menu_items.*' => 'required|exists:menus,id',
+            'menu_items.*' => 'required|exists:menu,id',
             'quantities' => 'required|array',
             'quantities.*' => 'required|integer|min:1',
         ]);
