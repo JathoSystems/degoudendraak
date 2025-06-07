@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\TabletOrderController;
@@ -39,6 +40,9 @@ Route::get('/takeaway', [TakeawayController::class, 'index'])->name('takeaway.in
 Route::post('/takeaway', [TakeawayController::class, 'store'])->name('takeaway.store');
 Route::get('/takeaway/thank-you/{order}', [TakeawayController::class, 'thankYou'])->name('takeaway.thank-you');
 
+// Review
+Route::get('/review/{reviewCode}', [ReviewController::class, 'showForm'])->name('review.form');
+Route::post('/review/{reviewCode}/submit', [ReviewController::class, 'submitReview'])->name('review.submit');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
