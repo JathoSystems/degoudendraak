@@ -38,7 +38,7 @@
                                 <!-- Naam -->
                                 <div class="mb-4">
                                     <label for="naam" class="block text-sm font-medium text-gray-700">Naam <span class="text-red-500">*</span></label>
-                                    <input type="text" name="naam" id="naam" value="{{ old('naam', $menuItem->naam) }}" required
+                                    <input type="text" name="naam" id="naam" value="{!! old('naam', $menuItem->naam) !!}" required
                                         class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                                     @error('naam')
                                         <p class="text-red-500 text-xs mt-1">{{ $message }}</p>

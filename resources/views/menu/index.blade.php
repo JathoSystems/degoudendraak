@@ -65,7 +65,7 @@
                                                 @endif
                                             </td>
                                             <td class="px-4 py-2 border-b">
-                                                {{ $item->naam }}
+                                                {!! $item->naam !!}
                                                 @if($item->beschrijving)
                                                     <div class="text-xs text-gray-500">{{ $item->beschrijving }}</div>
                                                 @endif

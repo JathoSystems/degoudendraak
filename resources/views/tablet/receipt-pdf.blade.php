@@ -203,7 +203,7 @@
                     @php $itemCount++; @endphp
                     <div class="item-row">
                         <div class="item-info">
-                            <div class="item-name">{{ $sale->menuItem->naam }}</div>
+                            <div class="item-name">{!! $sale->menuItem->naam !!}</div>
                             <div class="item-details">
                                 Nr. {{ $sale->menuItem->menunummer }}
                                 @if($sale->menuItem->menu_toevoeging)

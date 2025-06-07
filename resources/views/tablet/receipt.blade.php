@@ -43,7 +43,7 @@
                             @foreach($roundSales as $sale)
                                 <div class="flex justify-between items-center">
                                     <div class="flex-1">
-                                        <span class="font-medium">{{ $sale->menuItem->naam }}</span>
+                                        <span class="font-medium">{!! $sale->menuItem->naam !!}</span>
                                         @if($sale->amount > 1)
                                             <span class="text-gray-600">x{{ $sale->amount }}</span>
                                         @endif
