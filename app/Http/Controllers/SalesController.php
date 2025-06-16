@@ -6,6 +6,7 @@ use App\Models\Menu;
 use App\Models\Sale;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 use Carbon\Carbon;
 
 class SalesController extends Controller
@@ -48,6 +49,7 @@ class SalesController extends Controller
             'items' => 'required|array',
             'items.*.id' => 'required|exists:menu,id',
             'items.*.amount' => 'required|integer|min:1',
+            'items.*.remark' => 'nullable|string|max:255',
         ]);
 
         // Begin a transaction to ensure all sales are recorded
@@ -55,10 +57,18 @@ class SalesController extends Controller
 
         try {
             foreach ($validated['items'] as $item) {
+                // Log only if there's a remark for debugging
+                if (!empty($item['remark'])) {
+                    Log::info('Creating sale with remark:', [
+                        'itemId' => $item['id'],
+                        'remark' => $item['remark']
+                    ]);
+                }
                 Sale::create([
                     'itemId' => $item['id'],
                     'amount' => $item['amount'],
                     'saleDate' => Carbon::now(),
+                    'remarks' => $item['remark'] ?? null,
                 ]);
             }
 

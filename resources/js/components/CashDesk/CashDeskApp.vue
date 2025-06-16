@@ -11,7 +11,7 @@
             </button>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
             <!-- Menu Items Section -->
             <menu-items-list
                 :menu-items="menuItems"
@@ -26,7 +26,41 @@
                 @remove-item="removeItem"
                 @clear-order="clearOrder"
                 @complete-order="completeOrder"
+                @open-remarks-modal="openRemarksModal"
             ></order-summary>
+        </div>
+
+        <!-- Remarks Modal -->
+        <div v-if="remarksModal.show" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" @click="closeRemarksModal">
+            <div class="bg-white p-6 rounded-lg max-w-md w-full mx-4" @click.stop>
+                <h3 class="text-lg font-semibold mb-4">Opmerking toevoegen</h3>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                        Opmerking voor {{ remarksModal.itemName }}:
+                    </label>
+                    <textarea
+                        v-model="remarksModal.remark"
+                        rows="3"
+                        class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        placeholder="Voer een opmerking in..."
+                        ref="remarkTextarea"
+                    ></textarea>
+                </div>
+                <div class="flex justify-end space-x-3">
+                    <button
+                        @click="closeRemarksModal"
+                        class="px-4 py-2 text-gray-600 border border-gray-300 rounded hover:bg-gray-50"
+                    >
+                        Annuleren
+                    </button>
+                    <button
+                        @click="saveRemark"
+                        class="px-4 py-2 text-white bg-blue-500 rounded hover:bg-blue-600"
+                    >
+                        Opslaan
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -61,11 +95,23 @@ export default {
                 message: '',
                 type: 'success', // 'success' or 'error'
                 timeout: null
+            },
+            remarksModal: {
+                show: false,
+                itemId: null,
+                itemName: '',
+                remark: ''
             }
         };
     },
     mounted() {
         this.fetchMenuItems();
+        // Add keyboard event listener for modal
+        document.addEventListener('keydown', this.handleKeydown);
+    },
+    beforeUnmount() {
+        // Clean up event listener
+        document.removeEventListener('keydown', this.handleKeydown);
     },
     methods: {
         showNotification(message, type = 'success') {
@@ -115,9 +161,10 @@ export default {
                 // Add a new item to the order
                 this.orderItems.push({
                     id: item.id,
-                    name: item.naam,
+                    name: this.decodeHtmlEntities(item.naam),
                     price: item.price,
-                    quantity: 1
+                    quantity: 1,
+                    remark: ''
                 });
             }
         },
@@ -146,7 +193,8 @@ export default {
 
             const items = this.orderItems.map(item => ({
                 id: item.id,
-                amount: item.quantity
+                amount: item.quantity,
+                remark: item.remark && item.remark.trim() ? item.remark.trim() : ''
             }));
 
             this.loading = true;
@@ -176,6 +224,48 @@ export default {
                 this.showNotification('Er is een fout opgetreden bij het verwerken van de bestelling.', 'error');
                 console.error('Error completing order:', error);
             });
+        },
+        openRemarksModal(itemId) {
+            const item = this.orderItems.find(item => item.id === itemId);
+            if (item) {
+                this.remarksModal.show = true;
+                this.remarksModal.itemId = itemId;
+                this.remarksModal.itemName = item.name;
+                this.remarksModal.remark = item.remark || '';
+
+                // Focus the textarea after the modal is shown
+                this.$nextTick(() => {
+                    if (this.$refs.remarkTextarea) {
+                        this.$refs.remarkTextarea.focus();
+                    }
+                });
+            }
+        },
+        closeRemarksModal() {
+            this.remarksModal.show = false;
+            this.remarksModal.itemId = null;
+            this.remarksModal.itemName = '';
+            this.remarksModal.remark = '';
+        },
+        saveRemark() {
+            const itemIndex = this.orderItems.findIndex(item => item.id === this.remarksModal.itemId);
+            if (itemIndex !== -1) {
+                // Use direct assignment to ensure reactivity
+                this.orderItems[itemIndex].remark = this.remarksModal.remark;
+            }
+            this.closeRemarksModal();
+        },
+        handleKeydown(event) {
+            // Close modal on Escape key
+            if (event.key === 'Escape' && this.remarksModal.show) {
+                this.closeRemarksModal();
+            }
+        },
+        decodeHtmlEntities(text) {
+            if (!text) return text;
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = text;
+            return textarea.value;
         }
     }
 };

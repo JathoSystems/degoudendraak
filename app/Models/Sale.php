@@ -11,7 +11,8 @@ class Sale extends Model
         'itemId',
         'table_id',
         'amount',
-        'saleDate'
+        'saleDate',
+        'remarks'
     ];
 
     protected $casts = [

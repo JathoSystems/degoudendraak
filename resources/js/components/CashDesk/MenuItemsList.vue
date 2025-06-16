@@ -66,11 +66,11 @@
                     <span>
                     <strong v-if="item.menunummer">{{ item.menunummer }}{{ item.menu_toevoeging || '' }}.</strong>
                     <strong v-else-if="item.menu_toevoeging">{{ item.menu_toevoeging }}.</strong>
-                    {{ item.naam }}
+                    {{ decodeHtmlEntities(item.naam) }}
                     </span>
                     <span class="font-semibold">€{{ formatPrice(item.price) }}</span>
                 </div>
-                <div v-if="item.beschrijving" class="text-sm text-gray-500">{{ item.beschrijving }}</div>
+                <div v-if="item.beschrijving" class="text-sm text-gray-500">{{ decodeHtmlEntities(item.beschrijving) }}</div>
                 </div>
             </div>
             </div>
@@ -133,8 +133,9 @@ export default {
             Object.keys(this.groupedMenuItems).forEach(category => {
                 filtered[category] = this.groupedMenuItems[category].filter(item => {
                     const searchQueryLower = this.searchQuery.toLowerCase();
+                    const decodedName = this.decodeHtmlEntities(item.naam).toLowerCase();
                     return (
-                        item.naam.toLowerCase().includes(searchQueryLower) ||
+                        decodedName.includes(searchQueryLower) ||
                         (item.menunummer && item.menunummer.toString().includes(searchQueryLower)) ||
                         (item.menu_toevoeging && item.menu_toevoeging.toLowerCase().includes(searchQueryLower))
                     );
@@ -149,6 +150,12 @@ export default {
         },
         addToOrder(item) {
             this.$emit('add-to-order', item);
+        },
+        decodeHtmlEntities(text) {
+            if (!text) return text;
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = text;
+            return textarea.value;
         }
     }
 };

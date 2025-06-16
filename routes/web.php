@@ -4,11 +4,9 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MenuController;
-use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\TabletOrderController;
-use App\Http\Controllers\TakeawayController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 
@@ -35,14 +33,6 @@ Route::get('lang/{lang}', function ($lang) {
     return back();
 })->name('lang.switch');
 
-// Takeaway
-Route::get('/takeaway', [TakeawayController::class, 'index'])->name('takeaway.index');
-Route::post('/takeaway', [TakeawayController::class, 'store'])->name('takeaway.store');
-Route::get('/takeaway/thank-you/{order}', [TakeawayController::class, 'thankYou'])->name('takeaway.thank-you');
-
-// Review
-Route::get('/review/{reviewCode}', [ReviewController::class, 'showForm'])->name('review.form');
-Route::post('/review/{reviewCode}/submit', [ReviewController::class, 'submitReview'])->name('review.submit');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -62,7 +52,7 @@ Route::middleware('auth')->group(function () {
     Route::prefix('kassa')->group(function () {
         Route::get('/cashdesk', [SalesController::class, 'cashDesk'])->name('kassa.cashdesk');
         Route::get('/menu', [MenuController::class, 'getMenuForCashDesk'])->name('kassa.menu');
-        Route::post('/sales', [SalesController::class, 'store'])->name('kassa.sales.store');
+        // Sales creation handled by API route: /api/sales
         Route::get('/overview', [SalesController::class, 'overview'])->name('kassa.overview');
     });
 

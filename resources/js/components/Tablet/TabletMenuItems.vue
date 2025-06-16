@@ -96,21 +96,15 @@
                                 <div
                                     class="font-semibold text-lg text-gray-800"
                                 >
-                                    <span
-                                        v-if="item.menunummer"
-                                        class="text-indigo-600"
-                                        >{{ item.menunummer
-                                        }}{{
-                                            item.menu_toevoeging || ""
-                                        }}.</span
-                                    >
-                                    {{ item.naam }}
+                                    <span v-if="item.menunummer" class="text-indigo-600">{{ item.menunummer }}{{ item.menu_toevoeging || '' }}.</span>
+                                    <span v-else-if="item.menu_toevoeging" class="text-indigo-600">{{ item.menu_toevoeging }}.</span>
+                                    {{ decodeHtmlEntities(item.naam) }}
                                 </div>
                                 <div
                                     v-if="item.beschrijving"
                                     class="text-sm text-gray-600 mt-1"
                                 >
-                                    {{ item.beschrijving }}
+                                    {{ decodeHtmlEntities(item.beschrijving) }}
                                 </div>
                             </div>
                             <div class="ml-4 text-right">
@@ -197,10 +191,9 @@ export default {
                 filtered[category] = this.groupedMenuItems[category].filter(
                     (item) => {
                         const searchQueryLower = this.searchQuery.toLowerCase();
+                        const decodedName = this.decodeHtmlEntities(item.naam).toLowerCase();
                         return (
-                            item.naam
-                                .toLowerCase()
-                                .includes(searchQueryLower) ||
+                            decodedName.includes(searchQueryLower) ||
                             (item.menunummer &&
                                 item.menunummer
                                     .toString()
@@ -223,6 +216,12 @@ export default {
         addToOrder(item) {
             this.$emit("add-to-order", item);
         },
+        decodeHtmlEntities(text) {
+            if (!text) return text;
+            const textarea = document.createElement('textarea');
+            textarea.innerHTML = text;
+            return textarea.value;
+        }
     },
 };
 </script>
