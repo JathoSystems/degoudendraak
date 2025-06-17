@@ -8,6 +8,7 @@ use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\TableController;
 use App\Http\Controllers\TabletOrderController;
+use App\Http\Controllers\DailySalesReportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\AdminMiddleware;
 
@@ -50,6 +51,15 @@ Route::middleware('auth')->group(function () {
     // Menu management routes - only available to admin users
     Route::middleware(AdminMiddleware::class)->group(function () {
         Route::resource('menu', MenuController::class);
+        
+        // Daily Sales Reports - only for admins
+        Route::prefix('reports')->name('reports.')->group(function () {
+            Route::get('/daily-sales', [DailySalesReportController::class, 'index'])->name('daily-sales.index');
+            Route::get('/daily-sales/{report}', [DailySalesReportController::class, 'show'])->name('daily-sales.show');
+            Route::get('/daily-sales/{report}/download', [DailySalesReportController::class, 'download'])->name('daily-sales.download');
+            Route::post('/daily-sales/generate', [DailySalesReportController::class, 'generate'])->name('daily-sales.generate');
+            Route::post('/daily-sales/{report}/send-email', [DailySalesReportController::class, 'sendEmail'])->name('daily-sales.send-email');
+        });
     });
 
     // Cash desk routes

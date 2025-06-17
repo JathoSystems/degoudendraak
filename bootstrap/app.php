@@ -14,6 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         health: '/up',
     )
+    ->withSchedule(function ($schedule) {
+        // Generate daily sales report every day at 6:00 AM
+        $schedule->command('sales:daily-report')->dailyAt('06:00');
+    })
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             'admin'     => AdminMiddleware::class,

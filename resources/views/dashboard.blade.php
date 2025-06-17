@@ -74,6 +74,20 @@
                                     </a>
                                 </div>
                             </div>
+
+                            <!-- Dagelijkse Rapporten (alleen voor admins) -->
+                            <div class="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+                                <div class="bg-red-500 text-white p-4">
+                                    <h3 class="text-xl font-semibold">Dagelijkse Rapporten</h3>
+                                </div>
+                                <div class="p-4 bg-white">
+                                    <p class="text-gray-700 mb-4">Bekijk en download dagelijkse verkooprapporten in Excel.</p>
+                                    <a href="{{ route('reports.daily-sales.index') }}"
+                                        class="text-red-600 hover:text-red-800 font-medium">
+                                        Rapporten bekijken →
+                                    </a>
+                                </div>
+                            </div>
                         @endif
                     </div>
                 </div>
