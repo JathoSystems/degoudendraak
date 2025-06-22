@@ -11,6 +11,7 @@
             display: flex;
             flex-direction: row-reverse;
             justify-content: flex-end;
+            padding-bottom: 1rem;
         }
 
         .rating > input {
@@ -28,7 +29,7 @@
         .rating > label::before {
             content: "\2605";
             position: absolute;
-            opacity: 0;
+            opacity: 0.25;
         }
 
         .rating > label:hover:before,
@@ -60,42 +61,42 @@
         .delay-400 { animation-delay: 0.4s; }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen">
-<div class="max-w-2xl mx-auto p-6">
-    <div class="text-center mb-8 animate-fadeIn">
+<body class="min-h-screen bg-gray-100">
+<div class="max-w-2xl p-6 mx-auto">
+    <div class="mb-8 text-center animate-fadeIn">
         <h1 class="text-3xl font-bold text-indigo-600">De Gouden Draak</h1>
         <p class="text-gray-600">Chinese Restaurant</p>
     </div>
 
-    <div class="bg-white rounded-lg shadow-lg p-8 mb-6 animate-fadeIn delay-100">
-        <h2 class="text-2xl font-bold text-center mb-6 text-gray-800">Hoe was uw ervaring?</h2>
-        <p class="text-center text-gray-600 mb-6">Uw feedback helpt ons om onze service te verbeteren!</p>
+    <div class="p-8 mb-6 delay-100 bg-white rounded-lg shadow-lg animate-fadeIn">
+        <h2 class="mb-6 text-2xl font-bold text-center text-gray-800">Hoe was uw ervaring?</h2>
+        <p class="mb-6 text-center text-gray-600">Uw feedback helpt ons om onze service te verbeteren!</p>
 
         <form action="{{ route('review.submit', ['reviewCode' => $reviewCode]) }}" method="POST" class="space-y-6">
             @csrf
 
             <!-- Personal Info (Optional) -->
-            <div class="space-y-4 animate-fadeIn delay-200">
-                <h3 class="text-lg font-semibold text-gray-700 border-b pb-2">Uw Gegevens (Optioneel)</h3>
+            <div class="space-y-4 delay-200 animate-fadeIn">
+                <h3 class="pb-2 text-lg font-semibold text-gray-700 border-b">Uw Gegevens (Optioneel)</h3>
 
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Naam</label>
+                    <label for="name" class="block mb-1 text-sm font-medium text-gray-700">Naam</label>
                     <input type="text" name="name" id="name" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-indigo-200" placeholder="Uw naam">
                 </div>
 
                 <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+                    <label for="email" class="block mb-1 text-sm font-medium text-gray-700">E-mail</label>
                     <input type="email" name="email" id="email" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-indigo-200" placeholder="Uw e-mailadres">
-                    <p class="text-xs text-gray-500 mt-1">We sturen u alleen een bevestiging van uw korting</p>
+                    <p class="mt-1 text-xs text-gray-500">We sturen u alleen een bevestiging van uw korting</p>
                 </div>
             </div>
 
             <!-- Ratings -->
-            <div class="space-y-4 animate-fadeIn delay-300">
-                <h3 class="text-lg font-semibold text-gray-700 border-b pb-2">Beoordeel Uw Ervaring</h3>
+            <div class="delay-300 animate-fadeIn">
+                <h3 class="pb-2 text-lg font-semibold text-gray-700 border-b">Beoordeel Uw Ervaring</h3>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Eten</label>
+                <div class="pb-12">
+                    <label class="block mb-1 text-sm font-medium text-gray-700">Eten</label>
                     <div class="rating">
                         <input type="radio" id="food5" name="food_rating" value="5" required />
                         <label for="food5" title="5 sterren"></label>
@@ -109,12 +110,12 @@
                         <label for="food1" title="1 ster"></label>
                     </div>
                     @error('food_rating')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Service</label>
+                <div class="pb-12">
+                    <label class="block mb-1 text-sm font-medium text-gray-700">Service</label>
                     <div class="rating">
                         <input type="radio" id="service5" name="service_rating" value="5" required />
                         <label for="service5" title="5 sterren"></label>
@@ -128,12 +129,12 @@
                         <label for="service1" title="1 ster"></label>
                     </div>
                     @error('service_rating')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Sfeer</label>
+                <div class="pb-12">
+                    <label class="block mb-1 text-sm font-medium text-gray-700">Sfeer</label>
                     <div class="rating">
                         <input type="radio" id="ambiance5" name="ambiance_rating" value="5" required />
                         <label for="ambiance5" title="5 sterren"></label>
@@ -147,12 +148,12 @@
                         <label for="ambiance1" title="1 ster"></label>
                     </div>
                     @error('ambiance_rating')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
 
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Algemene Ervaring</label>
+                <div class="pb-12">
+                    <label class="block mb-1 text-sm font-medium text-gray-700">Algemene Ervaring</label>
                     <div class="rating">
                         <input type="radio" id="overall5" name="overall_rating" value="5" required />
                         <label for="overall5" title="5 sterren"></label>
@@ -166,22 +167,22 @@
                         <label for="overall1" title="1 ster"></label>
                     </div>
                     @error('overall_rating')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
             </div>
 
             <!-- Additional Questions -->
             <div class="space-y-4 animate-fadeIn delay-400">
-                <h3 class="text-lg font-semibold text-gray-700 border-b pb-2">Vertel ons meer</h3>
+                <h3 class="pb-2 text-lg font-semibold text-gray-700 border-b">Vertel ons meer</h3>
 
                 <div>
-                    <label for="favorite_dish" class="block text-sm font-medium text-gray-700 mb-1">Wat was uw favoriete gerecht?</label>
+                    <label for="favorite_dish" class="block mb-1 text-sm font-medium text-gray-700">Wat was uw favoriete gerecht?</label>
                     <input type="text" name="favorite_dish" id="favorite_dish" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-indigo-200" placeholder="Bijvoorbeeld: Babi Pangang">
                 </div>
 
                 <div>
-                    <label for="improvement_area" class="block text-sm font-medium text-gray-700 mb-1">Wat kunnen we verbeteren?</label>
+                    <label for="improvement_area" class="block mb-1 text-sm font-medium text-gray-700">Wat kunnen we verbeteren?</label>
                     <select name="improvement_area" id="improvement_area" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-indigo-200">
                         <option value="">Selecteer een optie</option>
                         <option value="food">Eten</option>
@@ -194,24 +195,24 @@
                 </div>
 
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-1">Zou u terugkomen?</label>
+                    <label class="block mb-1 text-sm font-medium text-gray-700">Zou u terugkomen?</label>
                     <div class="flex space-x-4">
                         <label class="inline-flex items-center">
-                            <input type="radio" name="would_return" value="1" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                            <input type="radio" name="would_return" value="1" required class="w-4 h-4 text-indigo-600 focus:ring-indigo-500">
                             <span class="ml-2">Ja</span>
                         </label>
                         <label class="inline-flex items-center">
-                            <input type="radio" name="would_return" value="0" required class="h-4 w-4 text-indigo-600 focus:ring-indigo-500">
+                            <input type="radio" name="would_return" value="0" required class="w-4 h-4 text-indigo-600 focus:ring-indigo-500">
                             <span class="ml-2">Nee</span>
                         </label>
                     </div>
                     @error('would_return')
-                    <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+                    <p class="mt-1 text-xs text-red-500">{{ $message }}</p>
                     @enderror
                 </div>
 
                 <div>
-                    <label for="heard_about_us" class="block text-sm font-medium text-gray-700 mb-1">Hoe heeft u over ons gehoord?</label>
+                    <label for="heard_about_us" class="block mb-1 text-sm font-medium text-gray-700">Hoe heeft u over ons gehoord?</label>
                     <select name="heard_about_us" id="heard_about_us" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-indigo-200">
                         <option value="">Selecteer een optie</option>
                         <option value="friends">Via vrienden of familie</option>
@@ -224,24 +225,24 @@
                 </div>
 
                 <div>
-                    <label for="feedback" class="block text-sm font-medium text-gray-700 mb-1">Aanvullende feedback</label>
+                    <label for="feedback" class="block mb-1 text-sm font-medium text-gray-700">Aanvullende feedback</label>
                     <textarea name="feedback" id="feedback" rows="4" class="w-full px-4 py-2 border rounded-md focus:ring focus:ring-indigo-200" placeholder="Vertel ons meer over uw ervaring..."></textarea>
                 </div>
             </div>
 
             <!-- Submit Button -->
             <div class="text-center">
-                <button type="submit" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                <button type="submit" class="px-6 py-3 font-bold text-white transition-colors bg-indigo-600 rounded-lg hover:bg-indigo-700">
                     Verstuur Beoordeling
                 </button>
-                <p class="text-sm text-gray-600 mt-2">En ontvang 10% korting bij uw volgende bezoek!</p>
+                <p class="mt-2 text-sm text-gray-600">En ontvang 10% korting bij uw volgende bezoek!</p>
             </div>
         </form>
     </div>
 
-    <div class="text-center text-gray-500 text-sm animate-fadeIn">
-        <p>De Gouden Draak • Dorpstraat 123 • 1234 AB Amsterdam</p>
-        <p>Tel: 020-1234567 • info@degoudendraak.nl</p>
+    <div class="text-sm text-center text-gray-500 animate-fadeIn">
+        <p>De Gouden Draak</p>
+        <p>Tel: +31 06 12345678 • info@degoudendraak.nl</p>
     </div>
 </div>
 

@@ -27,7 +27,7 @@ class SendDailySalesReportEmail implements ShouldQueue
     public function handle(): void
     {
         Log::info("Job started: Sending daily sales report email for {$this->report->report_date->format('Y-m-d')}...");
-        
+
         $adminUsers = User::where('isAdmin', true)->get();
         Log::info("Found {$adminUsers->count()} admin users");
 
@@ -41,7 +41,7 @@ class SendDailySalesReportEmail implements ShouldQueue
             Mail::to($admin->email)->send(new DailySalesReportMail($this->report));
             Log::info("Email sent successfully to: {$admin->email}");
         }
-        
+
         Log::info("Job completed: All emails sent successfully");
     }
 }
