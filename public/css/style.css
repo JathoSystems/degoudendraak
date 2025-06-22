@@ -118,11 +118,26 @@ td {
 
 .menu_middle {
     vertical-align: middle;
+    padding: .5rem;
+    flex: 1;
+    min-width: max-content;
 }
 
 .menu_middle a {
     color: white;
 }
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    flex-wrap: wrap;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
 
 .second_tr {
     padding-top: 50px;
@@ -320,4 +335,21 @@ a {
 }
 .language-switcher a.active {
     font-weight: bold;
+}
+
+
+/* Meer dingetjes */
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .menu_first_td img {
+        display: none;;
+    }
+
+    .width_td {
+        display: none;
+    }
 }
