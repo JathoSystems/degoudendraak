@@ -31,11 +31,11 @@
         </div>
 
         <!-- Remarks Modal -->
-        <div v-if="remarksModal.show" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" @click="closeRemarksModal">
-            <div class="bg-white p-6 rounded-lg max-w-md w-full mx-4" @click.stop>
-                <h3 class="text-lg font-semibold mb-4">Opmerking toevoegen</h3>
+        <div v-if="remarksModal.show" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" @click="closeRemarksModal">
+            <div class="w-full max-w-md p-6 mx-4 bg-white rounded-lg" @click.stop>
+                <h3 class="mb-4 text-lg font-semibold">Opmerking toevoegen</h3>
                 <div class="mb-4">
-                    <label class="block text-sm font-medium text-gray-700 mb-2">
+                    <label class="block mb-2 text-sm font-medium text-gray-700">
                         Opmerking voor {{ remarksModal.itemName }}:
                     </label>
                     <textarea

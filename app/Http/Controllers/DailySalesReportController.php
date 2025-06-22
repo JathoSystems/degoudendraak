@@ -4,16 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DailySalesReport;
-use Illuminate\Support\Facades\Storage;
-use Symfony\Component\HttpFoundation\Response;
 use App\Jobs\SendDailySalesReportEmail;
+use Illuminate\Support\Facades\Artisan;
 
 class DailySalesReportController extends Controller
 {
     public function index()
     {
         $reports = DailySalesReport::orderBy('report_date', 'desc')->paginate(20);
-        
+
         return view('reports.daily-sales.index', compact('reports'));
     }
 
@@ -41,12 +40,12 @@ class DailySalesReportController extends Controller
         ]);
 
         // Run the command to generate the report
-        \Artisan::call('sales:daily-report', [
+        Artisan::call('sales:daily-report', [
             'date' => $request->date,
             '--no-email' => true // Don't send email from manual generation
         ]);
 
-        $output = \Artisan::output();
+        $output = Artisan::output();
 
         if (str_contains($output, 'successfully')) {
             return back()->with('success', 'Rapport succesvol gegenereerd!');

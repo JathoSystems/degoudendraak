@@ -40,16 +40,13 @@ class GenerateDailySalesReport extends Command
     {
         // Get date from argument or use yesterday
         $date = $this->argument('date') ? Carbon::parse($this->argument('date')) : Carbon::yesterday();
-        
+
         $this->info("Generating daily sales report for {$date->format('Y-m-d')}...");
 
         // Check if report already exists
-        $existingReport = DailySalesReport::where('report_date', $date->format('Y-m-d'))->first();
+        $existingReport = DailySalesReport::whereDate('report_date', $date->format('Y-m-d'))->first();
         if ($existingReport) {
-            if (!$this->confirm("Report for {$date->format('Y-m-d')} already exists. Regenerate?")) {
-                $this->info('Report generation cancelled.');
-                return;
-            }
+            $this->warn("Report for {$date->format('Y-m-d')} already exists. Regenerating...");
         }
 
         // Get sales data for the date
@@ -93,16 +90,16 @@ class GenerateDailySalesReport extends Command
         // Save report to database
         if ($existingReport) {
             // Delete old file if exists
-            if ($existingReport->getFileExists()) {
+            if ($existingReport->file_path && Storage::disk('public')->exists($existingReport->file_path)) {
                 Storage::disk('public')->delete($existingReport->file_path);
             }
-            $report = $existingReport;
             $existingReport->update([
                 'file_path' => $fileName,
                 'total_sales' => $totalSales,
                 'total_orders' => $totalOrders,
                 'sales_summary' => $salesSummary,
             ]);
+            $report = $existingReport;
         } else {
             $report = DailySalesReport::create([
                 'report_date' => $date->format('Y-m-d'),
@@ -129,8 +126,8 @@ class GenerateDailySalesReport extends Command
      */
     private function sendEmailNotifications(DailySalesReport $report): void
     {
-        $adminUsers = User::where('is_admin', true)->get();
-        
+        $adminUsers = User::where('isAdmin', true)->get();
+
         if ($adminUsers->isEmpty()) {
             $this->warn("No admin users found to send email notifications.");
             return;
@@ -140,7 +137,7 @@ class GenerateDailySalesReport extends Command
 
         // Dispatch job to send emails in the background
         SendDailySalesReportEmail::dispatch($report);
-        
+
         $this->info("Email notifications have been queued successfully.");
     }
 
@@ -167,7 +164,7 @@ class GenerateDailySalesReport extends Command
         // VAT calculation (similar to existing implementation)
         $priceExVat = ($totalSales / 106) * 100;
         $vatAmount = $totalSales - $priceExVat;
-        
+
         $sheet->setCellValue('A8', 'Subtotaal (excl. BTW):');
         $sheet->setCellValue('B8', '€' . number_format($priceExVat, 2));
         $sheet->setCellValue('A9', 'BTW (6%):');
@@ -229,7 +226,7 @@ class GenerateDailySalesReport extends Command
         // Save file
         $fileName = 'daily-reports/daily-sales-report-' . $date->format('Y-m-d') . '.xlsx';
         $filePath = storage_path('app/public/' . $fileName);
-        
+
         // Create directory if it doesn't exist
         $directory = dirname($filePath);
         if (!file_exists($directory)) {
